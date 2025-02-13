@@ -618,13 +618,17 @@ strong {
 
 .clients-image {
   display: block;
-  max-width: 100px;
-  margin: auto;
-  transition: all ease 0.2s;
+  width: 80px;           /* largeur fixe */
+  height: 80px;          /* hauteur fixe, même valeur pour un carré */
+  object-fit: contain;   /* évite la déformation de l’icône */
+  margin: 0 auto;        /* centre l’icône horizontalement */
+  transition: all 0.2s ease;
+  border: 1px solid #eee; /* optionnel: petit cadre autour */
+  border-radius: 5px;    /* optionnel: angles arrondis */
 }
 
 .clients-image:hover {
-  transform: scale(1.3);
+  transform: scale(1.1);
 }
 
 
