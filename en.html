@@ -12,6 +12,7 @@
         <!-- CSS FILES -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -61,12 +62,23 @@
                             <a class="nav-link click-scroll" href="#section_6">Education</a>
                         </li>                
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_7">Work Experience</a>
+                            <a class="nav-link click-scroll" href="#section_7">Work</a>
                         </li>
      
                     </ul>
                 
                     <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#contactModal" style="cursor: pointer;">
+                                <i class="bi bi-envelope" style="font-size: 1.5rem;"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- data-bs-toggle and data-bs-target to open the modal by ID -->
+                            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#cvModal" style="cursor: pointer;">
+                                <i class="bi bi-file-earmark-person" style="font-size: 1.5rem;"></i>
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="https://www.linkedin.com/in/mzaliamine/" target="_blank">
                                 <i class="bi bi-linkedin" style="font-size: 1.5rem;"></i>
@@ -80,13 +92,7 @@
                         <li class="nav-item">
                             <!-- French version -->
                             <a class="nav-link" href="index.html">
-                                <i class="bi bi-globe" style="font-size: 1.5rem;"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <!-- data-bs-toggle and data-bs-target to open the modal by ID -->
-                            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#cvModal" style="cursor: pointer;">
-                                <i class="bi bi-file-earmark-person" style="font-size: 1.5rem;"></i>
+                                <img src="images/langues/france_flag.png" alt="Français" style="width: 36px; height: 36px; border-radius: 3px;">
                             </a>
                         </li>
                     </ul>
@@ -111,6 +117,39 @@
       </div>
     </div>
   </div>
+
+<!-- Contact Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="contactModalLabel">Contact Me</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="contactForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="name" name="name" 
+                               placeholder="John Doe" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Your Email</label>
+                        <input type="email" class="form-control" id="email" name="email" 
+                               placeholder="johndoe@example.com" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="4" 
+                                  placeholder="Hello Amine, I would like to..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                    <div id="formResponse" class="mt-3 text-center"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
         <!-- HERO -->
         <main>
