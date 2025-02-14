@@ -79,10 +79,34 @@
                                 <i class="bi bi-globe" style="font-size: 1.5rem;"></i>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <!-- data-bs-toggle and data-bs-target to open the modal by ID -->
+                            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#cvModal" style="cursor: pointer;">
+                                <i class="bi bi-file-earmark-person" style="font-size: 1.5rem;"></i>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
+
+        <!-- CV Modal -->
+<div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="cvModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl" style="max-width: 90%;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cvModalLabel">Mon CV</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" style="overflow: auto;">
+          <!-- Embed or iframe your PDF here -->
+          <iframe src="res/cv.pdf"
+                  style="width: 100%; height: 600px; border: none;"
+                  title="CV Preview"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
 
         <!-- HERO -->
         <main>
@@ -579,7 +603,7 @@
                                 
                                 <!-- Efrei Paris -->
                                 <div class="col-lg-6 col-12">
-                                    <div class="services-thumb">
+                                    <div class="services-thumb" id="education-efrei">
                                         <div class="d-flex flex-wrap align-items-center 
                                                     border-bottom mb-4 pb-3">
                                             <h3 class="mb-0">EFREI Paris</h3>
@@ -677,7 +701,7 @@
 
                                 <!-- RATP Data Expert -->
                                 <div class="col-lg-6 col-12">
-                                    <div class="services-thumb">
+                                    <div class="services-thumb" id="work-ratp-expert">
                                         <div class="d-flex flex-wrap align-items-center 
                                                     border-bottom mb-4 pb-3">
                                             <h3 class="mb-0">Data Expert (Apprentissage)</h3>
@@ -707,7 +731,7 @@
 
                                 <!-- RATP Data Analyst -->
                                 <div class="col-lg-6 col-12">
-                                    <div class="services-thumb">
+                                    <div class="services-thumb" id="work-ratp-analyst>
                                         <div class="d-flex flex-wrap align-items-center 
                                                     border-bottom mb-4 pb-3">
                                             <h3 class="mb-0">Data Analyst (Apprentissage)</h3>
@@ -735,7 +759,7 @@
 
                                 <!-- Ambroise Paré -->
                                 <div class="col-lg-6 col-12">
-                                    <div class="services-thumb">
+                                    <div class="services-thumb" id="work-logistic">
                                         <div class="d-flex flex-wrap align-items-center 
                                                     border-bottom mb-4 pb-3">
                                             <h3 class="mb-0">Logisticien (Stage)</h3>
