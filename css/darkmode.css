@@ -1,0 +1,163 @@
+/* MODE SOMBRE - Ajouter ce fichier et inclure dans fr.html et en.html */
+
+/* Transition smooth pour tous les éléments */
+body, .navbar .container, .modal-content, .services-thumb, .timeline-content, 
+.about, .featured, .clients, .services, .hero {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Mode sombre global */
+body.dark-mode {
+    background-color: #0f0f0f !important;
+    color: #e5e5e5 !important;
+}
+
+/* Navigation mode sombre */
+body.dark-mode .navbar .container {
+    background-color: #1e1e1e !important;
+}
+
+body.dark-mode .navbar-brand,
+body.dark-mode .nav-link {
+    color: #e5e5e5 !important;
+}
+
+/* Sections mode sombre */
+body.dark-mode .about,
+body.dark-mode .featured,
+body.dark-mode .clients,
+body.dark-mode .services {
+    background-color: #1a1a1a !important;
+}
+
+/* Cards/Thumb mode sombre */
+body.dark-mode .services-thumb,
+body.dark-mode .timeline-content,
+body.dark-mode .modal-content {
+    background-color: #1e1e1e !important;
+    color: #e5e5e5 !important;
+    border-color: #2a2a2a !important;
+}
+
+/* Textes mode sombre */
+body.dark-mode h1:not(.hero-title):not(.text-white), 
+body.dark-mode h2:not(.text-white):not(.hero h2), 
+body.dark-mode h3, 
+body.dark-mode h4, 
+body.dark-mode h5, 
+body.dark-mode h6 {
+    color: #e5e5e5 !important;
+}
+
+body.dark-mode p, 
+body.dark-mode li, 
+body.dark-mode small,
+body.dark-mode legend {
+    color: #b4b4b4 !important;
+}
+
+/* Labels et inputs mode sombre */
+body.dark-mode .form-label {
+    color: #e5e5e5 !important;
+}
+
+body.dark-mode .form-control {
+    background-color: #2a2a2a !important;
+    border-color: #3a3a3a !important;
+    color: #e5e5e5 !important;
+}
+
+/* Modal header mode sombre */
+body.dark-mode .modal-header {
+    border-bottom-color: #2a2a2a !important;
+}
+
+body.dark-mode .modal-title {
+    color: #e5e5e5 !important;
+}
+
+/* Bouton close mode sombre */
+body.dark-mode .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* Images dans cards gardent leur fond */
+body.dark-mode .services-icon-wrap {
+    background-color: #2a2a2a !important;
+}
+
+/* Liens mode sombre */
+body.dark-mode a:not(.nav-link):not(.navbar-brand) {
+    color: #a67b68 !important;
+}
+
+/* Bouton thème dans la navbar */
+.theme-toggle-btn {
+    background: none;
+    border: 1px solid #e9eaeb;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 0 !important;
+    margin-left: 10px;
+}
+
+.theme-toggle-btn:hover {
+    background-color: #815443 !important;
+    border-color: #815443 !important;
+    transform: scale(1.1);
+}
+
+.theme-toggle-btn svg {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    stroke-width: 2;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.sun-icon { 
+    display: block; 
+}
+
+.moon-icon { 
+    display: none; 
+}
+
+body.dark-mode .sun-icon { 
+    display: none; 
+}
+
+body.dark-mode .moon-icon { 
+    display: block; 
+}
+
+body.dark-mode .theme-toggle-btn {
+    border-color: #3a3a3a;
+}
+
+body.dark-mode .theme-toggle-btn svg {
+    color: #e5e5e5;
+}
+
+/* Animation du bouton thème */
+.theme-toggle-btn {
+    animation: none;
+}
+
+.theme-toggle-btn.rotating {
+    animation: rotate360 0.5s ease;
+}
+
+@keyframes rotate360 {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
