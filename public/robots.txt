@@ -1,0 +1,16 @@
+# robots.txt pour Portfolio Amine M'ZALI
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://simiamine.github.io/sitemap.xml
+
+# Crawl delay (optionnel)
+Crawl-delay: 1
+
+# Disallow des chemins spécifiques (si nécessaire)
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /*.json$
+

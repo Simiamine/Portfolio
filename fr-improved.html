@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Portfolio de Amine M'ZALI - Big Data & Machine Learning">
+        <meta name="author" content="Amine M'ZALI">
+        <title>Portfolio d'Amine M'ZALI</title>
+
+        <!-- FICHIERS CSS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+        <link href="css/templatemo-first-portfolio-style.css" rel="stylesheet">
+        
+        <!-- MODE SOMBRE -->
+        <style>
+            /* Transition smooth */
+            body, .navbar, .modal-content, .services-thumb, .timeline-content, .about, .featured, .clients {
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+            
+            /* Mode sombre */
+            body.dark-mode {
+                background-color: #0f0f0f !important;
+                color: #e5e5e5 !important;
+            }
+            
+            body.dark-mode .navbar .container,
+            body.dark-mode .modal-content,
+            body.dark-mode .services-thumb,
+            body.dark-mode .timeline-content {
+                background-color: #1e1e1e !important;
+                color: #e5e5e5 !important;
+            }
+            
+            body.dark-mode .about,
+            body.dark-mode .featured,
+            body.dark-mode .clients {
+                background-color: #1a1a1a !important;
+            }
+            
+            body.dark-mode h1, body.dark-mode h2:not(.text-white), 
+            body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
+                color: #e5e5e5 !important;
+            }
+            
+            body.dark-mode p, body.dark-mode li, body.dark-mode small {
+                color: #b4b4b4 !important;
+            }
+            
+            /* Bouton thème */
+            .theme-toggle-btn {
+                background: none;
+                border: 1px solid #e9eaeb;
+                border-radius: 50%;
+                width: 44px;
+                height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: all 0.3s;
+                padding: 0;
+            }
+            
+            .theme-toggle-btn:hover {
+                background-color: #815443;
+                border-color: #815443;
+            }
+            
+            .theme-toggle-btn svg {
+                width: 20px;
+                height: 20px;
+                stroke: currentColor;
+                stroke-width: 2;
+                fill: none;
+            }
+            
+            .sun-icon { display: block; }
+            .moon-icon { display: none; }
+            
+            body.dark-mode .sun-icon { display: none; }
+            body.dark-mode .moon-icon { display: block; }
+            
+            body.dark-mode .theme-toggle-btn {
+                border-color: #2a2a2a;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <section class="preloader">
+            <div class="spinner">
+                <span class="spinner-rotate"></span>    
+            </div>
+        </section>
+
+        <!-- BARRE DE NAVIGATION -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" 
+                        aria-expanded="false" aria-label="Basculer la navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <a href="fr-improved.html" class="navbar-brand mx-auto mx-lg-0">Amine M'ZALI</a>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-lg-5">
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_1">Accueil</a>
+                        </li>                
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_2">Moi</a>
+                        </li>         
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_3">Parcours</a>
+                        </li> 
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_4">Projets</a>
+                        </li>                
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_5">Compétences</a>
+                        </li>                
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_6">Formation</a>
+                        </li>                
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_7">Expérience</a>
+                        </li>
+                    </ul>
+                
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#contactModal" style="cursor: pointer;">
+                                <i class="bi bi-envelope" style="font-size: 1.5rem;"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#cvModal" style="cursor: pointer;">
+                                <i class="bi bi-file-earmark-person" style="font-size: 1.5rem;"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.linkedin.com/in/mzaliamine/" target="_blank">
+                                <i class="bi bi-linkedin" style="font-size: 1.5rem;"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/Simiamine" target="_blank">
+                                <i class="bi bi-github" style="font-size: 1.5rem;"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="en.html">
+                                <img src="images/langues/english_flag.png" alt="English" style="width: 36px; height: 36px; border-radius: 3px;">
+                            </a>
+                        </li>
+                        <!-- NOUVEAU : Bouton mode sombre -->
+                        <li class="nav-item">
+                            <button class="theme-toggle-btn nav-link" onclick="toggleDarkMode()" aria-label="Changer le thème">
+                                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="5"/>
+                                    <line x1="12" y1="1" x2="12" y2="3"/>
+                                    <line x1="12" y1="21" x2="12" y2="23"/>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                                    <line x1="1" y1="12" x2="3" y2="12"/>
+                                    <line x1="21" y1="12" x2="23" y2="12"/>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                                </svg>
+                                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                                </svg>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+<!-- LE RESTE DU CONTENU DE FR.HTML ICI - exactement pareil -->
+<!-- Je mets un marqueur pour que vous sachiez où copier -->
+
+

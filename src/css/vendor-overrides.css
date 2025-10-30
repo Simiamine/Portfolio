@@ -1,0 +1,141 @@
+/**
+ * Overrides pour Bootstrap et autres bibliothèques
+ */
+
+/* Bootstrap Modal overrides */
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+[data-theme="dark"] .modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  background-color: var(--color-surface);
+  border: none;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-2xl);
+}
+
+.modal-header {
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--spacing-lg) var(--spacing-xl);
+}
+
+.modal-title {
+  color: var(--color-text-dark);
+  font-weight: var(--font-weight-bold);
+}
+
+.modal-body {
+  padding: var(--spacing-xl);
+  color: var(--color-text);
+}
+
+.modal-footer {
+  border-top: 1px solid var(--color-border);
+  padding: var(--spacing-lg) var(--spacing-xl);
+}
+
+.btn-close {
+  filter: var(--bs-btn-close-white-filter);
+}
+
+[data-theme="dark"] .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* Bootstrap Buttons overrides */
+.btn-primary {
+  --bs-btn-bg: var(--color-primary);
+  --bs-btn-border-color: var(--color-primary);
+  --bs-btn-hover-bg: var(--color-secondary);
+  --bs-btn-hover-border-color: var(--color-secondary);
+  --bs-btn-active-bg: var(--color-secondary);
+  --bs-btn-active-border-color: var(--color-secondary);
+}
+
+/* Bootstrap Form overrides */
+.form-control {
+  background-color: var(--color-surface);
+  border-color: var(--color-border);
+  color: var(--color-text-dark);
+}
+
+.form-control:focus {
+  background-color: var(--color-surface);
+  border-color: var(--color-primary);
+  color: var(--color-text-dark);
+  box-shadow: 0 0 0 0.25rem rgba(129, 84, 67, 0.25);
+}
+
+.form-label {
+  color: var(--color-text-dark);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Bootstrap Grid responsive adjustments */
+@media (max-width: 991px) {
+  .container {
+    max-width: 100%;
+    padding-left: var(--spacing-lg);
+    padding-right: var(--spacing-lg);
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+  }
+
+  .row {
+    margin-left: calc(var(--spacing-md) * -1);
+    margin-right: calc(var(--spacing-md) * -1);
+  }
+
+  .row > * {
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+  }
+}
+
+/* Bootstrap Icons color adjustments */
+.bi {
+  color: inherit;
+}
+
+/* Bootstrap Collapse override */
+.collapse:not(.show) {
+  display: none;
+}
+
+.collapse.show {
+  display: block;
+}
+
+/* Bootstrap Navbar overrides */
+.navbar-toggler:focus {
+  box-shadow: none;
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Animations compatibles avec Bootstrap */
+.fade {
+  transition: opacity var(--transition-base);
+}
+
+.fade.show {
+  opacity: 1;
+}
+
+.fade:not(.show) {
+  opacity: 0;
+}
+
+.show {
+  display: block !important;
+}
+

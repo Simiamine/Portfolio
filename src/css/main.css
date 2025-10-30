@@ -1,0 +1,20 @@
+/**
+ * Point d'entrée principal des styles
+ * Importe tous les fichiers CSS dans l'ordre approprié
+ */
+
+/* 1. Variables et configuration */
+@import './variables.css';
+
+/* 2. Reset et styles de base */
+@import './base.css';
+
+/* 3. Composants réutilisables */
+@import './components.css';
+
+/* 4. Layout et sections */
+@import './layout.css';
+
+/* 5. Vendor overrides (Bootstrap, etc.) */
+@import './vendor-overrides.css';
+

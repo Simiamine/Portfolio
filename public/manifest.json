@@ -1,0 +1,68 @@
+{
+  "name": "Amine M'ZALI - Portfolio",
+  "short_name": "Amine M'ZALI",
+  "description": "Portfolio professionnel d'Amine M'ZALI - Data Engineer & Machine Learning Specialist",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f6f6",
+  "theme_color": "#815443",
+  "orientation": "portrait-primary",
+  "lang": "fr-FR",
+  "dir": "ltr",
+  "categories": ["business", "education", "portfolio"],
+  "icons": [
+    {
+      "src": "/images/icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/images/screenshot-mobile.png",
+      "sizes": "540x720",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/images/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Projets",
+      "short_name": "Projets",
+      "description": "Voir tous mes projets",
+      "url": "/#section_4",
+      "icons": [
+        {
+          "src": "/images/icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Contact",
+      "short_name": "Contact",
+      "description": "Me contacter",
+      "url": "/#contact",
+      "icons": [
+        {
+          "src": "/images/icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}
+
