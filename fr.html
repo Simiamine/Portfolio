@@ -1,0 +1,858 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfolio d'Amine M'ZALI - Étudiant en Big Data & Machine Learning à l'Efrei Paris">
+    <meta name="author" content="Amine M'ZALI">
+    
+    <title>Amine M'ZALI - Portfolio Big Data & ML</title>
+    
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- CSS -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- PRELOADER -->
+    <section class="preloader">
+        <div class="spinner">
+            <span class="spinner-rotate"></span>
+        </div>
+    </section>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#home" class="navbar-brand">Amine M'ZALI</a>
+            
+            <ul class="navbar-nav" id="navbar-nav">
+                <li><a href="#home" class="nav-link click-scroll">Accueil</a></li>
+                <li><a href="#about" class="nav-link click-scroll">Moi</a></li>
+                <li><a href="#parcours" class="nav-link click-scroll">Parcours</a></li>
+                <li><a href="#projects" class="nav-link click-scroll">Projets</a></li>
+                <li><a href="#skills" class="nav-link click-scroll">Compétences</a></li>
+                <li><a href="#formation" class="nav-link click-scroll">Formation</a></li>
+                <li><a href="#experience" class="nav-link click-scroll">Expérience</a></li>
+                <li><a href="#" class="nav-link" data-modal="contactModal"><i class="bi bi-envelope"></i></a></li>
+                <li><a href="#" class="nav-link" data-modal="cvModal"><i class="bi bi-file-earmark-person"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/mzaliamine/" target="_blank" class="nav-link"><i class="bi bi-linkedin"></i></a></li>
+                <li><a href="https://github.com/Simiamine" target="_blank" class="nav-link"><i class="bi bi-github"></i></a></li>
+                <li><a href="en.html" class="nav-link">
+                    <img src="images/langues/english_flag.png" alt="English" class="language-flag">
+                </a></li>
+            </ul>
+            
+            <button class="navbar-toggler" id="navbar-toggler">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MODAL CV -->
+    <div class="modal" id="cvModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Mon CV</h5>
+                    <button type="button" class="btn-close" data-dismiss="modal">×</button>
+                </div>
+                <div class="modal-body">
+                    <iframe src="res/cvfr.pdf" style="width: 100%; height: 600px; border: none;" title="CV"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL CONTACT -->
+    <div class="modal" id="contactModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Me Contacter</h5>
+                    <button type="button" class="btn-close" data-dismiss="modal">×</button>
+                </div>
+                <div class="modal-body">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Votre nom</label>
+                            <input type="text" class="form-control" id="name" name="Nom" placeholder="Jean Dupont" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Votre e-mail</label>
+                            <input type="email" class="form-control" id="email" name="Email" placeholder="jean.dupont@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" placeholder="Bonjour Amine, je souhaiterais..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-paper-plane"></i> Envoyer le message
+                        </button>
+                        <div id="formResponse" style="margin-top: 1rem; text-align: center;"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero" id="home">
+            <div class="hero-background">
+                <div class="wave-shape wave-shape-1"></div>
+                <div class="wave-shape wave-shape-2"></div>
+            </div>
+            
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="avatar-wrapper">
+                        <img src="images/moi.jpg" alt="Amine M'ZALI" class="avatar-image">
+                        <div class="chat-bubble">Bonjour !</div>
+                    </div>
+                    <div class="chat-bubble">Je suis Amine M'ZALI</div>
+                    <div class="chat-bubble">Futur Ingénieur Data - Efrei Paris</div>
+                    <div class="chat-bubble">3 ans d'expérience | Disponible Sept 2026</div>
+                </div>
+                
+                <div class="hero-image">
+                    <div class="floating-card">
+                        <div class="card-content">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Data Analysis</span>
+                        </div>
+                    </div>
+                    <div class="floating-card">
+                        <div class="card-content">
+                            <i class="fas fa-database"></i>
+                            <span>Data Engineering</span>
+                        </div>
+                    </div>
+                    <div class="floating-card">
+                        <div class="card-content">
+                            <i class="fas fa-brain"></i>
+                            <span>Data Science</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <div class="mouse"></div>
+                <span>Scroll</span>
+            </div>
+        </section>
+
+        <!-- À PROPOS -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Qui suis-je ?</span>
+                    <h2 class="section-title">À propos</h2>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-image-wrapper">
+                        <img src="images/test.png" alt="Illustration" class="about-image">
+                    </div>
+                    
+                    <div class="about-text">
+                        <h3>Qui suis-je ?</h3>
+                        <p>
+                            Actuellement en <strong>dernière année d'école d'ingénieur</strong> à 
+                            <strong>l'Efrei Paris</strong>, spécialisé en <strong>Big Data et Machine Learning</strong>, 
+                            je cumule <strong>3 ans d'expérience en alternance</strong> dans le domaine de la data.
+                        </p>
+                        <p>
+                            Fort d'une expertise complète en <strong>Data Analysis</strong>, 
+                            <strong>Data Engineering</strong> et <strong>Data Science</strong>, 
+                            je cherche à intégrer le monde professionnel à partir de la 
+                            <strong>rentrée 2026</strong> et suis ouvert à toute opportunité 
+                            dans ces trois domaines.
+                        </p>
+                        <p>
+                            Passionné par l'innovation et la résolution de problèmes, 
+                            j'ai eu l'opportunité de travailler dans des environnements variés 
+                            (transport, pharmaceutique, recherche internationale) et je suis 
+                            toujours curieux d'explorer de nouveaux défis techniques.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Highlights séparés en dessous -->
+                <div class="about-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Data Analysis</h4>
+                        <p>Analyse et visualisation de données</p>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-database"></i>
+                        <h4>Data Engineering</h4>
+                        <p>Pipelines ETL et architectures data</p>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-brain"></i>
+                        <h4>Data Science</h4>
+                        <p>Machine Learning et IA</p>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-rocket"></i>
+                        <h4>Innovant</h4>
+                        <p>Toujours à la recherche de solutions créatives</p>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-users"></i>
+                        <h4>Collaboratif</h4>
+                        <p>Travail d'équipe et communication</p>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <h4>Curieux</h4>
+                        <p>Apprentissage continu et veille technologique</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PARCOURS (TIMELINE BIFURQUÉE) -->
+        <section class="timeline-section" id="parcours">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Mon Histoire</span>
+                    <h2 class="section-title">Mon Parcours</h2>
+                </div>
+                
+                <div class="timeline">
+                    <!-- EFREI + Sanofi Data Analyst -->
+                    <div class="timeline-row">
+                        <a href="#formation" class="timeline-item-link">
+                            <div class="timeline-item left">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <small>Août 2024 - Aujourd'hui</small>
+                                    <h4>EFREI Paris</h4>
+                                    <p>Master en Big Data & Machine Learning</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="#experience" class="timeline-item-link">
+                            <div class="timeline-item right">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <small>Sept 2025 - Aujourd'hui</small>
+                                    <h4>Sanofi Data Analyst</h4>
+                                    <p>Accélérateur M&S de Lyon</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- Stage UKM Malaisie + RATP Data Expert -->
+                    <div class="timeline-row">
+                        <a href="#experience" class="timeline-item-link">
+                            <div class="timeline-item left">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-flask"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <small>Juin 2025 - Septembre 2025</small>
+                                    <h4>Stage Recherche IA - UKM</h4>
+                                    <p>Malaisie - Projet AL-Warisan</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="#experience" class="timeline-item-link">
+                            <div class="timeline-item right">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <small>Août 2024 - Septembre 2025</small>
+                                    <h4>RATP Data Expert</h4>
+                                    <p>Plateforme data AWS pour véhicules autonomes</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- CY Tech + RATP Data Analyst -->
+                    <div class="timeline-row">
+                        <a href="#formation" class="timeline-item-link">
+                            <div class="timeline-item left">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <small>Sept 2023 - Juin 2024</small>
+                                    <h4>CY Tech</h4>
+                                    <p>Ingénierie en Informatique</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="#experience" class="timeline-item-link">
+                            <div class="timeline-item right">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <small>Sept 2023 - Août 2024</small>
+                                    <h4>RATP Data Analyst</h4>
+                                    <p>Décisions data-driven à la RATP</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- INSA + Logisticien -->
+                    <div class="timeline-row">
+                        <a href="#formation" class="timeline-item-link">
+                            <div class="timeline-item left">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <small>Sept 2021 - Juin 2023</small>
+                                    <h4>INSA Rouen</h4>
+                                    <p>Cycle préparatoire en Ingénierie</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="#experience" class="timeline-item-link">
+                            <div class="timeline-item right">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <small>Juillet 2022 - Août 2022</small>
+                                    <h4>Logisticien</h4>
+                                    <p>Optimisation des flux médical</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJETS -->
+        <section class="projects" id="projects">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Mes réalisations</span>
+                    <h2 class="section-title">Projets</h2>
+                </div>
+                
+                <div class="projects-grid">
+                    <!-- Airport Project -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <a href="https://github.com/Simiamine/ScalaAirportManager/" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                            <div class="project-placeholder">
+                                <i class="fas fa-plane"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>AirportProject (Scala)</h3>
+                            <h4>Application de gestion d'aéroports</h4>
+                            <p>
+                                Application Scala qui analyse trois fichiers CSV (pays, aéroports, pistes) 
+                                et propose une recherche par code ou nom approximatif.
+                            </p>
+                            <ul>
+                                <li>Parsing CSV personnalisé</li>
+                                <li>Fuzzy matching</li>
+                                <li>Interface JavaFX et mode CLI</li>
+                                <li>Futures Scala pour traitement parallèle</li>
+                            </ul>
+                            <a href="https://github.com/Simiamine/ScalaAirportManager/" target="_blank" class="custom-btn custom-border-btn">
+                                <i class="fab fa-github"></i> Dépôt GitHub
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Diabetes ML -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <a href="https://github.com/Simiamine/Diabetes-Machine-Learning/" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                            <div class="project-placeholder">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Diabetes Machine Learning</h3>
+                            <h4>Classification du diabète</h4>
+                            <p>
+                                Projet EFREI pour prédire l'apparition du diabète avec le dataset 
+                                Pima Indians Diabetes.
+                            </p>
+                            <ul>
+                                <li>Régression Logistique</li>
+                                <li>Arbre de Décision</li>
+                                <li>Réseau de Neurones (MLP)</li>
+                                <li>Grid Search optimization</li>
+                            </ul>
+                            <a href="https://github.com/Simiamine/Diabetes-Machine-Learning/" target="_blank" class="custom-btn custom-border-btn">
+                                <i class="fab fa-github"></i> Dépôt GitHub
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- E-commerce -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <a href="https://github.com/Simiamine/Pokeshop" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                            <div class="project-placeholder">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>E-commerce</h3>
+                            <h4>Stack : PHP / Django</h4>
+                            <p>
+                                Sites e-commerce avec gestion des utilisateurs, panier, 
+                                catalogue et modules de paiement sécurisé.
+                            </p>
+                            <ul>
+                                <li>Rôles (admin/client)</li>
+                                <li>Suivi de commandes temps réel</li>
+                                <li>Dashboard d'administration</li>
+                                <li>Intégration d'API</li>
+                            </ul>
+                            <a href="https://github.com/Simiamine/Pokeshop" target="_blank" class="custom-btn custom-border-btn">
+                                <i class="fab fa-github"></i> Dépôt GitHub
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Zelda Game -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <a href="https://github.com/Simiamine/Zelda" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                            <div class="project-placeholder">
+                                <i class="fas fa-gamepad"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Jeu Java (Zelda-like)</h3>
+                            <h4>Jeu d'action en vue du dessus</h4>
+                            <p>
+                                Projet Java inspiré de Zelda : A Link to the Past.
+                            </p>
+                            <ul>
+                                <li>Déplacements et combats</li>
+                                <li>Interactions avec objets</li>
+                                <li>Transitions intérieur/extérieur</li>
+                                <li>Système d'inventaire</li>
+                            </ul>
+                            <a href="https://github.com/Simiamine/Zelda" target="_blank" class="custom-btn custom-border-btn">
+                                <i class="fab fa-github"></i> Dépôt GitHub
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Automates -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <a href="https://github.com/Simiamine/ProjetCAutomate" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                            <div class="project-placeholder">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Éditeur d'Automates</h3>
+                            <h4>C / Algorithmique</h4>
+                            <p>
+                                Projet en langage C manipulant des automates d'états finis.
+                            </p>
+                            <ul>
+                                <li>Création/modification d'automates</li>
+                                <li>Test de reconnaissance de mots</li>
+                                <li>Vérification complétude/déterminisme</li>
+                                <li>Produit d'automates</li>
+                            </ul>
+                            <a href="https://github.com/Simiamine/ProjetCAutomate" target="_blank" class="custom-btn custom-border-btn">
+                                <i class="fab fa-github"></i> Dépôt GitHub
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Motus -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <a href="https://github.com/Simiamine/BoucheCousue" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                            <div class="project-placeholder">
+                                <i class="fas fa-keyboard"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Motus (Bouche Cousue)</h3>
+                            <h4>FreePascal</h4>
+                            <p>
+                                Jeu inspiré du "Motus" français et de Wordle : devinez le mot mystère 
+                                en 6 tentatives.
+                            </p>
+                            <a href="https://github.com/Simiamine/BoucheCousue" target="_blank" class="custom-btn custom-border-btn">
+                                <i class="fab fa-github"></i> Dépôt GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 3rem;">
+                    <p style="margin-bottom: 1.5rem;">Plus de projets sur mon GitHub</p>
+                    <a href="https://github.com/Simiamine" target="_blank" class="custom-btn">
+                        <i class="fab fa-github"></i> Voir tous mes projets
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMPÉTENCES -->
+        <section class="skills" id="skills">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Mes atouts</span>
+                    <h2 class="section-title">Compétences Techniques</h2>
+                </div>
+                
+                <!-- Langages & Technologies avec icônes -->
+                <h3 style="text-align: center; margin-bottom: 3rem; color: var(--primary-dark);">Langages, Big Data & DevOps</h3>
+                
+                <div class="row justify-content-center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+                    <div class="clients-item-height">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" class="clients-image" alt="Python">
+                        <legend style="text-align:center; font-weight: 600;">Python</legend>
+                    </div>
+                    
+                    <div class="clients-item-height">
+                        <img src="https://spark.apache.org/images/spark-logo-trademark.png" class="clients-image" alt="Spark">
+                        <legend style="text-align:center; font-weight: 600;">PySpark / Spark</legend>
+                    </div>
+                    
+                    <div class="clients-item-height">
+                        <img src="https://logos-marques.com/wp-content/uploads/2023/09/MySQL-Logo-thmb.png" class="clients-image" alt="SQL">
+                        <legend style="text-align:center; font-weight: 600;">SQL</legend>
+                    </div>
+                    
+                    <div class="clients-item-height">
+                        <img src="https://cdn.worldvectorlogo.com/logos/scala-4.svg" class="clients-image" alt="Scala">
+                        <legend style="text-align:center; font-weight: 600;">Scala</legend>
+                    </div>
+                    
+                    <div class="clients-item-height">
+                        <img src="https://0adri3n.github.io/assets/img/java.webp" class="clients-image" alt="Java">
+                        <legend style="text-align:center; font-weight: 600;">Java</legend>
+                    </div>
+                    
+                    <div class="clients-item-height">
+                        <img src="https://0adri3n.github.io/assets/img/clang.png" class="clients-image" alt="C/C++">
+                        <legend style="text-align:center; font-weight: 600;">C/C++</legend>
+                    </div>
+                    
+                    <div class="clients-item-height">
+                        <img src="https://cdn.worldvectorlogo.com/logos/hadoop.svg" class="clients-image" alt="Hadoop">
+                        <legend style="text-align:center; font-weight: 600;">Hadoop</legend>
+                    </div>
+                    
+                    <div class="clients-item-height">
+                        <img src="https://cdn.worldvectorlogo.com/logos/aws-2.svg" class="clients-image" alt="AWS">
+                        <legend style="text-align:center; font-weight: 600;">AWS</legend>
+                    </div>
+                    
+                    <div class="clients-item-height">
+                        <img src="https://cdn.worldvectorlogo.com/logos/docker-4.svg" class="clients-image" alt="Docker">
+                        <legend style="text-align:center; font-weight: 600;">Docker</legend>
+                    </div>
+                    
+                    <div class="clients-item-height">
+                        <img src="https://cdn.worldvectorlogo.com/logos/django-community.svg" class="clients-image" alt="Django">
+                        <legend style="text-align:center; font-weight: 600;">Django</legend>
+                    </div>
+                    
+                    <div class="clients-item-height">
+                        <img src="https://seeklogo.com/images/D/dbt-logo-500AB0BAA7-seeklogo.com.png" class="clients-image" alt="dbt">
+                        <legend style="text-align:center; font-weight: 600;">dbt</legend>
+                    </div>
+                    
+                    <div class="clients-item-height">
+                        <img src="https://companieslogo.com/img/orig/SNOW-35164165.png" class="clients-image" alt="Snowflake">
+                        <legend style="text-align:center; font-weight: 600;">Snowflake</legend>
+                    </div>
+                    
+                    <div class="clients-item-height">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/AirflowLogo.png" class="clients-image" alt="Airflow">
+                        <legend style="text-align:center; font-weight: 600;">Airflow</legend>
+                    </div>
+                    
+                    <div class="clients-item-height">
+                        <img src="https://streamlit.io/images/brand/streamlit-mark-color.png" class="clients-image" alt="Streamlit">
+                        <legend style="text-align:center; font-weight: 600;">Streamlit</legend>
+                    </div>
+                </div>
+                
+                <!-- Langues -->
+                <h3 style="text-align: center; margin: 4rem 0 3rem; color: var(--primary-dark);">Langues</h3>
+                
+                <div class="row justify-content-center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+                    <div class="clients-item-height">
+                        <img src="images/langues/france.png" class="clients-image" alt="Français">
+                        <legend style="text-align:center; font-weight: 600;">Français : Maternelle</legend>
+                    </div>
+                    
+                    <div class="clients-item-height">
+                        <img src="images/langues/royaume-uni.png" class="clients-image" alt="Anglais">
+                        <legend style="text-align:center; font-weight: 600;">Anglais : Bilingue</legend>
+                    </div>
+                    
+                    <div class="clients-item-height">
+                        <img src="images/langues/arabe.png" class="clients-image" alt="Arabe">
+                        <legend style="text-align:center; font-weight: 600;">Arabe : Courant</legend>
+                    </div>
+                    
+                    <div class="clients-item-height">
+                        <img src="images/langues/espagne.png" class="clients-image" alt="Espagnol">
+                        <legend style="text-align:center; font-weight: 600;">Espagnol : Basique</legend>
+                    </div>
+                </div>
+                
+                <!-- Certifications -->
+                <h3 style="text-align: center; margin: 4rem 0 3rem; color: var(--primary-dark);">Certifications</h3>
+                
+                <div class="row justify-content-center" style="display: flex; flex-wrap: wrap; justify-content: center;">
+                    <div class="clients-item-height">
+                        <img src="https://training.cellenza.com/wp-content/uploads/2024/01/AI_Fundamentals-597x600V2.png" class="clients-image" alt="Azure AI-900">
+                        <legend style="text-align:center; font-weight: 600;">Azure AI-900</legend>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FORMATION -->
+        <section class="projects" id="formation">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Mes études</span>
+                    <h2 class="section-title">Formation</h2>
+                </div>
+                
+                <div class="projects-grid">
+                    <!-- EFREI -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_-VVCpieEvVM9OlQIPqqMD1AWiAsx4vGyP0Q1B1Zscg&s" style="width: 120px; height: 120px; border-radius: 20px; object-fit: contain;">
+                        </div>
+                        <div class="project-content">
+                            <h3>EFREI Paris</h3>
+                            <h4>Master Big Data & ML (2024-2026)</h4>
+                            <p>Grande École, Ingénieur Informatique (Apprentissage)</p>
+                            <ul>
+                                <li>Machine Learning, Deep Learning</li>
+                                <li>Data Engineering, Data Lakes</li>
+                                <li>DevOps & MLOps</li>
+                                <li>Programmation fonctionnelle (Scala)</li>
+                                <li>Cloud (AWS / Azure)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- CY Tech -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8rakpiBSGWNfvX9-c0caPuvkKSIoy7-bjLg&s" style="width: 120px; height: 120px; border-radius: 20px; object-fit: contain;">
+                        </div>
+                        <div class="project-content">
+                            <h3>CY Tech</h3>
+                            <h4>Ingénierie Informatique (2023-2024)</h4>
+                            <p>Grande École, Informatique (Apprentissage)</p>
+                            <ul>
+                                <li>Algorithmes & programmation</li>
+                                <li>Bases de données, OS</li>
+                                <li>Optimisation linéaire</li>
+                                <li>Programmation Web</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- INSA -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCAHq0A4OIckeCHwD_Y8oXi5mj7wcpgMjf5Q&s" style="width: 120px; height: 120px; border-radius: 20px; object-fit: contain;">
+                        </div>
+                        <div class="project-content">
+                            <h3>INSA Rouen</h3>
+                            <h4>Cycle Préparatoire (2021-2023)</h4>
+                            <p>Sciences et Techniques de l'Ingénieur</p>
+                            <ul>
+                                <li>Informatique (algo, IA, data)</li>
+                                <li>Mathématiques appliquées</li>
+                                <li>Physique</li>
+                                <li>Projets d'équipe</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPÉRIENCE -->
+        <section class="skills" id="experience">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Mon parcours professionnel</span>
+                    <h2 class="section-title">Expérience Professionnelle</h2>
+                </div>
+                
+                <div class="projects-grid">
+                    <!-- Sanofi Data Analyst -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/sanofi.png" style="width: 120px; height: 120px; border-radius: 20px; object-fit: contain; background: white; padding: 10px;" alt="Sanofi">
+                        </div>
+                        <div class="project-content">
+                            <h3>Data Analyst (Alternance)</h3>
+                            <h4>Sanofi · Lyon</h4>
+                            <p style="font-style: italic; color: var(--text-gray);">Septembre 2025 — Aujourd'hui</p>
+                            <ul>
+                                <li>Analyse de données à l'Accélérateur M&S de Lyon</li>
+                                <li>Développement de solutions data-driven pour l'industrie pharmaceutique</li>
+                                <li>Création de tableaux de bord et rapports analytiques</li>
+                                <li>Collaboration avec les équipes Manufacturing & Supply</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Stage UKM Malaisie -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/UKM.jpg" style="width: 120px; height: 120px; border-radius: 20px; object-fit: contain;" alt="UKM Malaysia">
+                        </div>
+                        <div class="project-content">
+                            <h3>Stage de Recherche en IA</h3>
+                            <h4>UKM (Universiti Kebangsaan Malaysia) · Malaisie</h4>
+                            <p style="font-style: italic; color: var(--text-gray);">Juin 2025 — Septembre 2025</p>
+                            <ul>
+                                <li>Laboratoire de recherche en Intelligence Artificielle</li>
+                                <li>Sous la direction du Professeur Zukefli bin Mansour</li>
+                                <li>Rédaction d'un papier de recherche sur le testing de l'IA AL-Warisan</li>
+                                <li>Projet gouvernemental malaisien : IA en langue malaise</li>
+                                <li>Testing, évaluation et amélioration de modèles NLP</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- RATP Data Expert -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://www.festival-circulations.com/wp-content/uploads/2016/01/RATP.jpg" style="width: 120px; height: 120px; border-radius: 20px; object-fit: cover;">
+                        </div>
+                        <div class="project-content">
+                            <h3>Data Expert (Alternance)</h3>
+                            <h4>RATP · Paris</h4>
+                            <p style="font-style: italic; color: var(--text-gray);">Août 2024 — Septembre 2025</p>
+                            <ul>
+                                <li>Conception d'une plateforme Data sur AWS pour véhicules autonomes</li>
+                                <li>Développement de pipelines ETL avec AWS Glue (Spark)</li>
+                                <li>Création de dashboards Amazon QuickSight</li>
+                                <li>Développement d'interfaces React (Vite)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- RATP Data Analyst -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://www.festival-circulations.com/wp-content/uploads/2016/01/RATP.jpg" style="width: 120px; height: 120px; border-radius: 20px; object-fit: cover;">
+                        </div>
+                        <div class="project-content">
+                            <h3>Data Analyst (Apprentissage)</h3>
+                            <h4>RATP · Paris</h4>
+                            <p style="font-style: italic; color: var(--text-gray);">Sept 2023 — Août 2024</p>
+                            <ul>
+                                <li>Automatisation du reporting RH via VBA</li>
+                                <li>Création de tableaux de bord dynamiques</li>
+                                <li>Intégration de solutions IA pour optimiser le tri des candidatures</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Ambroise Paré -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn6s03M2-ppPYxCWARnFmf3vAiVk0STVvOyw&s" style="width: 120px; height: 120px; border-radius: 20px; object-fit: contain;">
+                        </div>
+                        <div class="project-content">
+                            <h3>Stage en Logistique</h3>
+                            <h4>Groupe Ambroise Paré</h4>
+                            <p style="font-style: italic; color: var(--text-gray);">2022 · Clichy-sous-Bois</p>
+                            <ul>
+                                <li>Optimisation des flux d'inventaire</li>
+                                <li>Gestion de l'approvisionnement</li>
+                                <li>Création et mise à jour des dotations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Amine M'ZALI. Tous droits réservés.</p>
+                <p>Conçu avec <i class="fas fa-heart"></i> et <i class="fas fa-coffee"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+
