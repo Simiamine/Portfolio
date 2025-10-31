@@ -1,4 +1,4 @@
-# 🚀 Portfolio Amine M'ZALI - Fusion Edition
+# 🚀 Portfolio Amine M'ZALI
 
 Portfolio professionnel moderne avec un design unique : 
 - 🎨 **Design bicolore marron/beige** avec formes ondulées
