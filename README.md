@@ -1,8 +1,8 @@
 # 🚀 Portfolio Amine M'ZALI - Fusion Edition
 
-Portfolio professionnel fusionnant le meilleur de deux mondes : 
-- 🎨 **Design bicolore marron/beige** d'Amine avec formes ondulées
-- ✨ **Animations modernes** et effets glassmorphism du portfolio Rania
+Portfolio professionnel moderne avec un design unique : 
+- 🎨 **Design bicolore marron/beige** avec formes ondulées
+- ✨ **Animations modernes** et effets glassmorphism
 - 🌐 **Support multilingue** FR/EN avec détection automatique
 - 📱 **Responsive** mobile, tablette, desktop
 
@@ -208,10 +208,7 @@ Le portfolio est optimisé pour :
 
 ## 🎨 Crédits
 
-Design fusionné créé par l'IA Claude (Anthropic) en combinant :
-- Portfolio original d'Amine M'ZALI
-- Portfolio de Rania Zeramdini
-- Meilleures pratiques UX/UI modernes
+Portfolio créé avec l'aide de l'IA Claude (Anthropic) en appliquant les meilleures pratiques UX/UI modernes.
 
 ## 📄 Licence
 
