@@ -19,6 +19,7 @@ export interface Experience {
   period: string;
   description: { fr: string[]; en: string[] };
   icon: string;
+  logo: string;
 }
 
 export interface Education {
@@ -28,6 +29,7 @@ export interface Education {
   period: string;
   details: { fr: string[]; en: string[] };
   icon: string;
+  logo: string;
 }
 
 export const PROJECTS: Project[] = [
@@ -297,6 +299,7 @@ export const EXPERIENCES: Experience[] = [
     id: "sanofi",
     company: "Sanofi",
     icon: "Pill",
+    logo: "/images/logos/sanofi.png",
     role: { fr: "Data & ML Engineer (Alternance)", en: "Data & ML Engineer (Work-Study)" },
     location: "Lyon",
     period: "Oct. 2025 — Present",
@@ -321,6 +324,7 @@ export const EXPERIENCES: Experience[] = [
     id: "ratp-auto",
     company: "RATP",
     icon: "Bus",
+    logo: "/images/logos/ratp.png",
     role: {
       fr: "Lead Data Engineer — Vehicules autonomes (Alternance)",
       en: "Lead Data Engineer — Autonomous Vehicles (Work-Study)",
@@ -348,6 +352,7 @@ export const EXPERIENCES: Experience[] = [
     id: "ratp-drh",
     company: "RATP",
     icon: "Train",
+    logo: "/images/logos/ratp.png",
     role: { fr: "Data Analyst — DRH (Apprentissage)", en: "Data Analyst — HR (Apprenticeship)" },
     location: "Paris",
     period: "Sept. 2023 — Aout 2024",
@@ -370,6 +375,7 @@ export const EXPERIENCES: Experience[] = [
     id: "ambroise-pare",
     company: "Groupe Ambroise Pare",
     icon: "Hospital",
+    logo: "/images/logos/ambroise-pare.png",
     role: { fr: "Logisticien (Stage)", en: "Logistics Officer (Internship)" },
     location: "Clichy-sous-Bois",
     period: "Juil. — Aout 2022",
@@ -393,6 +399,7 @@ export const EDUCATION: Education[] = [
     id: "efrei",
     school: "EFREI Paris",
     icon: "GraduationCap",
+    logo: "/images/logos/efrei.png",
     degree: {
       fr: "Diplome d'Ingenieur — Big Data & Machine Learning",
       en: "Engineering Degree — Big Data & Machine Learning",
@@ -421,6 +428,7 @@ export const EDUCATION: Education[] = [
     id: "ukm",
     school: "UKM (Universiti Kebangsaan Malaysia)",
     icon: "Globe",
+    logo: "/images/logos/ukm.png",
     degree: {
       fr: "Stage Recherche en IA — Projet AL-Warisan",
       en: "AI Research Internship — AL-Warisan Project",
@@ -447,6 +455,7 @@ export const EDUCATION: Education[] = [
     id: "cytech",
     school: "CY Tech",
     icon: "Monitor",
+    logo: "/images/logos/cytech.png",
     degree: {
       fr: "Ingenierie Informatique",
       en: "Computer Engineering",
@@ -471,6 +480,7 @@ export const EDUCATION: Education[] = [
     id: "insa",
     school: "INSA Rouen",
     icon: "BookOpen",
+    logo: "/images/logos/insa.png",
     degree: {
       fr: "Cycle preparatoire — Sciences de l'Ingenieur",
       en: "Preparatory cycle — Engineering Sciences",

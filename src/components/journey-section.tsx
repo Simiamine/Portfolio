@@ -1,15 +1,15 @@
 "use client";
 
+import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import { motion } from "framer-motion";
 import { GraduationCap, Briefcase, ChevronDown } from "lucide-react";
 import { EXPERIENCES, EDUCATION } from "@/content/data";
-import { getIcon } from "@/lib/icons";
 
 interface TimelinePair {
   year: string;
-  left: { id: string; title: string; subtitle: string; icon: string };
-  right: { id: string; title: string; subtitle: string; icon: string };
+  left: { id: string; title: string; subtitle: string; logo: string };
+  right: { id: string; title: string; subtitle: string; logo: string };
 }
 
 export function JourneySection() {
@@ -23,13 +23,13 @@ export function JourneySection() {
         id: EDUCATION[3].id,
         title: EDUCATION[3].school,
         subtitle: EDUCATION[3].degree[locale],
-        icon: EDUCATION[3].icon,
+        logo: EDUCATION[3].logo,
       },
       right: {
         id: EXPERIENCES[3].id,
         title: EXPERIENCES[3].company,
         subtitle: EXPERIENCES[3].role[locale],
-        icon: EXPERIENCES[3].icon,
+        logo: EXPERIENCES[3].logo,
       },
     },
     {
@@ -38,13 +38,13 @@ export function JourneySection() {
         id: EDUCATION[2].id,
         title: EDUCATION[2].school,
         subtitle: EDUCATION[2].degree[locale],
-        icon: EDUCATION[2].icon,
+        logo: EDUCATION[2].logo,
       },
       right: {
         id: EXPERIENCES[2].id,
         title: EXPERIENCES[2].company,
         subtitle: EXPERIENCES[2].role[locale],
-        icon: EXPERIENCES[2].icon,
+        logo: EXPERIENCES[2].logo,
       },
     },
     {
@@ -53,13 +53,13 @@ export function JourneySection() {
         id: EDUCATION[0].id,
         title: EDUCATION[0].school,
         subtitle: EDUCATION[0].degree[locale],
-        icon: EDUCATION[0].icon,
+        logo: EDUCATION[0].logo,
       },
       right: {
         id: EXPERIENCES[1].id,
         title: EXPERIENCES[1].company,
         subtitle: EXPERIENCES[1].role[locale],
-        icon: EXPERIENCES[1].icon,
+        logo: EXPERIENCES[1].logo,
       },
     },
     {
@@ -68,13 +68,13 @@ export function JourneySection() {
         id: EDUCATION[1].id,
         title: EDUCATION[1].school,
         subtitle: EDUCATION[1].degree[locale],
-        icon: EDUCATION[1].icon,
+        logo: EDUCATION[1].logo,
       },
       right: {
         id: EXPERIENCES[0].id,
         title: EXPERIENCES[0].company,
         subtitle: EXPERIENCES[0].role[locale],
-        icon: EXPERIENCES[0].icon,
+        logo: EXPERIENCES[0].logo,
       },
     },
   ];
@@ -119,7 +119,6 @@ export function JourneySection() {
           <div className="space-y-8">
             {pairs.map((pair, rowIndex) => (
               <div key={pair.year} className="relative flex items-stretch">
-                {/* Left side (Education) */}
                 <div className="w-[calc(50%-20px)] pr-6">
                   <TimelineCard
                     item={pair.left}
@@ -129,7 +128,6 @@ export function JourneySection() {
                   />
                 </div>
 
-                {/* Center: year badge + dot */}
                 <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 z-10 flex flex-col items-center">
                   <div className="w-4 h-4 rounded-full bg-gradient-to-br from-primary-dark to-primary-light border-[3px] border-background shadow-md" />
                   {rowIndex === pairs.length - 1 && (
@@ -140,7 +138,6 @@ export function JourneySection() {
                   </span>
                 </div>
 
-                {/* Right side (Experience) */}
                 <div className="w-[calc(50%-20px)] pl-6 ml-auto">
                   <TimelineCard
                     item={pair.right}
@@ -160,45 +157,39 @@ export function JourneySection() {
             <GraduationCap size={18} className="text-primary-dark" />
             {t("education")}
           </h3>
-          {EDUCATION.map((edu) => {
-            const Icon = getIcon(edu.icon);
-            return (
-              <button
-                key={edu.id}
-                onClick={() => scrollToDetail(edu.id)}
-                className="block w-full text-left p-4 rounded-xl border border-border bg-card hover:border-primary-light/40 transition-colors"
-              >
-                <div className="flex items-center gap-2 mb-1">
-                  <Icon size={16} className="text-primary-light" />
-                  <p className="text-xs font-mono text-muted">{edu.period}</p>
-                </div>
-                <p className="font-semibold text-foreground">{edu.school}</p>
-                <p className="text-sm text-primary-light">{edu.degree[locale]}</p>
-              </button>
-            );
-          })}
+          {EDUCATION.map((edu) => (
+            <button
+              key={edu.id}
+              onClick={() => scrollToDetail(edu.id)}
+              className="block w-full text-left p-4 rounded-xl border border-border bg-card hover:border-primary-light/40 transition-colors"
+            >
+              <div className="flex items-center gap-3 mb-2">
+                <Image src={edu.logo} alt={edu.school} width={24} height={24} className="rounded object-contain" />
+                <p className="text-xs font-mono text-muted">{edu.period}</p>
+              </div>
+              <p className="font-semibold text-foreground">{edu.school}</p>
+              <p className="text-sm text-primary-light">{edu.degree[locale]}</p>
+            </button>
+          ))}
 
           <h3 className="text-lg font-semibold flex items-center gap-2 mb-4 mt-8">
             <Briefcase size={18} className="text-primary-light" />
             {t("experience")}
           </h3>
-          {EXPERIENCES.map((exp) => {
-            const Icon = getIcon(exp.icon);
-            return (
-              <button
-                key={exp.id}
-                onClick={() => scrollToDetail(exp.id)}
-                className="block w-full text-left p-4 rounded-xl border border-border bg-card hover:border-primary-light/40 transition-colors"
-              >
-                <div className="flex items-center gap-2 mb-1">
-                  <Icon size={16} className="text-primary-light" />
-                  <p className="text-xs font-mono text-muted">{exp.period}</p>
-                </div>
-                <p className="font-semibold text-foreground">{exp.company} · {exp.location}</p>
-                <p className="text-sm text-primary-light">{exp.role[locale]}</p>
-              </button>
-            );
-          })}
+          {EXPERIENCES.map((exp) => (
+            <button
+              key={exp.id}
+              onClick={() => scrollToDetail(exp.id)}
+              className="block w-full text-left p-4 rounded-xl border border-border bg-card hover:border-primary-light/40 transition-colors"
+            >
+              <div className="flex items-center gap-3 mb-2">
+                <Image src={exp.logo} alt={exp.company} width={24} height={24} className="rounded object-contain" />
+                <p className="text-xs font-mono text-muted">{exp.period}</p>
+              </div>
+              <p className="font-semibold text-foreground">{exp.company} · {exp.location}</p>
+              <p className="text-sm text-primary-light">{exp.role[locale]}</p>
+            </button>
+          ))}
         </div>
       </div>
     </section>
@@ -211,13 +202,11 @@ function TimelineCard({
   direction,
   onClick,
 }: {
-  item: { title: string; subtitle: string; icon: string };
+  item: { title: string; subtitle: string; logo: string };
   index: number;
   direction: "left" | "right";
   onClick: () => void;
 }) {
-  const Icon = getIcon(item.icon);
-
   return (
     <motion.button
       onClick={onClick}
@@ -228,10 +217,14 @@ function TimelineCard({
       className="group w-full cursor-pointer"
     >
       <div className={`p-4 rounded-xl border border-border bg-card shadow-sm hover:shadow-lg hover:border-primary-light/30 hover:-translate-y-1 transition-all ${direction === "left" ? "text-right" : "text-left"}`}>
-        <div className={`flex items-center gap-2 mb-2 ${direction === "left" ? "justify-end" : ""}`}>
-          <div className="w-7 h-7 rounded-lg bg-primary-light/10 flex items-center justify-center">
-            <Icon size={14} className="text-primary-light" />
-          </div>
+        <div className={`flex items-center gap-2.5 mb-2 ${direction === "left" ? "justify-end" : ""}`}>
+          <Image
+            src={item.logo}
+            alt={item.title}
+            width={28}
+            height={28}
+            className="rounded-md object-contain"
+          />
           <ChevronDown
             size={14}
             className="text-muted group-hover:text-primary-light transition-colors"
