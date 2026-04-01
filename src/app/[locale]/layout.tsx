@@ -6,6 +6,7 @@ import { routing } from "@/lib/i18n/routing";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
+import { ScrollProgress } from "@/components/scroll-progress";
 
 interface LocaleLayoutProps {
   children: React.ReactNode;
@@ -27,6 +28,7 @@ export default async function LocaleLayout({
   return (
     <NextIntlClientProvider messages={messages} locale={locale}>
       <ThemeProvider>
+        <ScrollProgress />
         <Nav />
         <main className="flex-1">{children}</main>
         <Footer />

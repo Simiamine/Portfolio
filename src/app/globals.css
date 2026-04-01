@@ -75,3 +75,23 @@ body {
   box-shadow: 0 0 30px rgba(94, 41, 51, 0.3);
   border-color: rgba(129, 84, 67, 0.5);
 }
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.1); }
+}
+
+@keyframes scroll-progress {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-dark), var(--primary-light));
+  z-index: 9999;
+  transition: width 0.1s ease;
+}

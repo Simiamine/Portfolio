@@ -51,9 +51,9 @@ export function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: index * 0.08 }}
-                className="flex items-center gap-3 p-4 rounded-lg border border-border bg-card"
+                className="flex items-center gap-3 p-4 rounded-lg border border-border bg-card hover:bg-primary-light/5 hover:-translate-y-1 transition-all"
               >
-                <Icon size={18} className="text-muted shrink-0" />
+                <Icon size={18} className="text-primary-light shrink-0" />
                 <span className="text-sm font-medium">
                   {t(`highlights.${key}`)}
                 </span>
