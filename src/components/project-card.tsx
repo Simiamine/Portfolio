@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, type MouseEvent } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { useLocale } from "next-intl";
@@ -59,12 +60,22 @@ export function ProjectCard({ project, index, ctaLabel }: ProjectCardProps) {
           <div className="p-6 flex flex-col flex-1">
             <div className="flex items-start justify-between mb-3">
               <div className="flex items-center gap-3">
-                <div
-                  className="w-9 h-9 rounded-lg flex items-center justify-center"
-                  style={{ background: `${project.color}15` }}
-                >
-                  <Icon size={18} style={{ color: project.color }} />
-                </div>
+                {project.logo ? (
+                  <Image
+                    src={project.logo}
+                    alt={project.title}
+                    width={36}
+                    height={36}
+                    className="rounded-lg object-contain shrink-0"
+                  />
+                ) : (
+                  <div
+                    className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0"
+                    style={{ background: `${project.color}15` }}
+                  >
+                    <Icon size={18} style={{ color: project.color }} />
+                  </div>
+                )}
                 <h3 className="font-serif text-2xl tracking-tight">
                   {project.title}
                 </h3>
