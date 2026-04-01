@@ -1,0 +1,38 @@
+## Context
+
+Recruitment in SMBs still relies on Excel files, emails, and manual CV screening. Existing solutions (traditional ATS) are expensive and don't offer intelligent matching.
+
+## The problem
+
+How to automatically match candidates to job offers by combining **semantic similarity** and **explicit business criteria**, while keeping the scoring transparent and explainable?
+
+## Technical solution
+
+RhaniA is a full-stack recruitment platform with hybrid matching.
+
+### Architecture
+
+- **Frontend**: Next.js 14 (App Router), TypeScript, Tailwind, Radix UI, TanStack Query
+- **Backend**: FastAPI, SQLAlchemy 2 async, PostgreSQL 16 + pgvector
+- **ML**: PyTorch, Sentence-BERT (all-MiniLM-L6-v2), vector embeddings
+- **AI**: Gemini Vision (CV parsing), OpenAI/Anthropic (interview questions)
+- **Infra**: Docker Compose, multi-OS startup scripts
+
+### Key features
+
+- AI vision CV parsing (PDF → structured data)
+- Hybrid matching: cosine similarity (pgvector) + multi-criteria scoring (skills, languages, seniority, contract type)
+- Explainable scoring with per-criterion weighting
+- Application management with status pipeline
+- Interview scheduling with calendar integration (Google / Microsoft)
+- LLM-generated interview questions based on profile
+- Multi-company support with invitation system
+- Built-in English tests
+- ~100 backend tests
+
+### Notable technical details
+
+- Vector embeddings stored in database (pgvector) for semantic search
+- Hybrid scoring combining vectors and business rules with synonyms
+- JWT auth with role-based permission matrix
+- Strict Router → Service → Repository architecture

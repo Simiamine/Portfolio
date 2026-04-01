@@ -1,0 +1,38 @@
+## Contexte
+
+Le recrutement en PME repose encore sur des fichiers Excel, des e-mails et du tri manuel de CV. Les solutions existantes (ATS classiques) sont chères et ne proposent pas de matching intelligent.
+
+## Le problème
+
+Comment matcher automatiquement des candidats à des offres en combinant **similarité sémantique** et **critères métier explicites**, tout en gardant le scoring transparent et explicable ?
+
+## Solution technique
+
+RhaniA est une plateforme de recrutement full-stack avec matching hybride.
+
+### Architecture
+
+- **Frontend** : Next.js 14 (App Router), TypeScript, Tailwind, Radix UI, TanStack Query
+- **Backend** : FastAPI, SQLAlchemy 2 async, PostgreSQL 16 + pgvector
+- **ML** : PyTorch, Sentence-BERT (all-MiniLM-L6-v2), embeddings vectoriels
+- **IA** : Gemini Vision (parsing CV), OpenAI/Anthropic (questions d'entretien)
+- **Infra** : Docker Compose, scripts de démarrage multi-OS
+
+### Fonctionnalités clés
+
+- Parsing de CV par IA vision (PDF → données structurées)
+- Matching hybride : cosine similarity (pgvector) + scoring multi-critères (compétences, langues, séniorité, type de contrat)
+- Scoring explicable avec pondération par critère
+- Gestion des candidatures avec pipeline de statuts
+- Planification d'entretiens avec intégration calendrier (Google / Microsoft)
+- Génération de questions d'entretien par LLM selon le profil
+- Multi-entreprises avec système d'invitations
+- Tests d'anglais intégrés
+- ~100 tests backend
+
+### Points techniques notables
+
+- Embeddings vectoriels stockés en base (pgvector) pour la recherche sémantique
+- Scoring hybride combinant vecteurs et règles métier avec synonymes
+- Auth JWT avec matrice de permissions par rôle
+- Architecture Router → Service → Repository stricte

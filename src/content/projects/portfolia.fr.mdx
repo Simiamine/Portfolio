@@ -1,0 +1,38 @@
+## Contexte
+
+Un professionnel doit maintenir son CV, son LinkedIn, son portfolio, ses lettres de motivation — et recommencer à chaque mise à jour. L'information est dispersée, répétitive, jamais synchronisée.
+
+## Le problème
+
+Comment centraliser l'identité professionnelle en un seul endroit et générer automatiquement les différentes sorties (CV, portfolio web, recherche d'emploi) ?
+
+## Solution technique
+
+PortfoliA est une plateforme d'identité professionnelle unifiée, développée en équipe de 5 dans le cadre d'un projet EFREI.
+
+### Architecture
+
+- **Frontend** : React 18, Vite 5, TypeScript, Tailwind, Zustand, Framer Motion
+- **Backend** : FastAPI, SQLAlchemy 2, PostgreSQL, Alembic
+- **IA** : Gemini (génération), ChromaDB (embeddings/recherche sémantique)
+- **Imports** : GitHub API, LinkedIn PDF parsing
+- **Infra** : Docker Compose, Cloudflare R2, Sentry
+
+### Fonctionnalités clés
+
+- Profil riche : expériences, formations, projets, compétences, langues, certifications
+- Import depuis LinkedIn (PDF) et GitHub
+- Génération de CV (templates LaTeX)
+- Portfolio web hébergé et personnalisable
+- Recherche d'emploi assistée avec matching sémantique
+- Génération de lettres de motivation par IA
+- Scraping d'offres (France Travail, Hiring.cafe)
+- Système de crédits et gamification
+- Module B2B (écoles, entreprises, cohortes)
+
+### Points techniques notables
+
+- Embeddings Gemini + ChromaDB pour la recherche sémantique d'offres
+- Rendering PDF via WeasyPrint/Playwright
+- Store Zustand découpé en slices thématiques
+- ~50 modules de routes backend

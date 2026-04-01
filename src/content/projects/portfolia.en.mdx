@@ -1,0 +1,38 @@
+## Context
+
+A professional must maintain their resume, LinkedIn, portfolio, cover letters — and start over with every update. Information is scattered, repetitive, never in sync.
+
+## The problem
+
+How to centralize professional identity in one place and automatically generate different outputs (resume, web portfolio, job search)?
+
+## Technical solution
+
+PortfoliA is a unified professional identity platform, built by a team of 5 as an EFREI school project.
+
+### Architecture
+
+- **Frontend**: React 18, Vite 5, TypeScript, Tailwind, Zustand, Framer Motion
+- **Backend**: FastAPI, SQLAlchemy 2, PostgreSQL, Alembic
+- **AI**: Gemini (generation), ChromaDB (embeddings/semantic search)
+- **Imports**: GitHub API, LinkedIn PDF parsing
+- **Infra**: Docker Compose, Cloudflare R2, Sentry
+
+### Key features
+
+- Rich profile: experiences, education, projects, skills, languages, certifications
+- Import from LinkedIn (PDF) and GitHub
+- Resume generation (LaTeX templates)
+- Hosted and customizable web portfolio
+- AI-assisted job search with semantic matching
+- AI-generated cover letters
+- Job scraping (France Travail, Hiring.cafe)
+- Credits system and gamification
+- B2B module (schools, companies, cohorts)
+
+### Notable technical details
+
+- Gemini embeddings + ChromaDB for semantic job search
+- PDF rendering via WeasyPrint/Playwright
+- Zustand store split into thematic slices
+- ~50 backend route modules
