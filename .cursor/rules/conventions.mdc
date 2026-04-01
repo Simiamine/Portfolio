@@ -1,0 +1,72 @@
+---
+description: Conventions specifiques au portfolio. Complete les development-standards du workspace parent. Regles d'icones, nommage, qualite.
+alwaysApply: true
+---
+
+# Portfolio — Conventions & Regles
+
+## Regle #1 : ZERO EMOJI
+
+**Les emojis sont STRICTEMENT INTERDITS partout dans le codebase.**
+
+Cela inclut :
+- `data.ts` : pas de champ `emoji`, utiliser un champ `icon` (nom d'icone Lucide)
+- Composants React : pas de `<span>` avec emoji, utiliser `<Icon />` de lucide-react
+- Messages i18n (`fr.json`, `en.json`) : pas d'emoji dans les textes
+- Commentaires : pas d'emoji
+
+Alternative obligatoire : **icones Lucide React** (`lucide-react`).
+Chaque entite (projet, experience, education, skill group) a un champ `icon` de type string
+correspondant au nom du composant Lucide (ex: `"GraduationCap"`, `"Building2"`, `"Briefcase"`).
+
+## Conventions Frontend (TypeScript / Next.js)
+
+### Nommage
+- Composants : PascalCase (`ProjectCard`, `HeroSection`)
+- Fichiers composants : kebab-case (`project-card.tsx`, `hero.tsx`)
+- Fonctions : camelCase (`scrollToDetail`, `handleMouseMove`)
+- Types/Interfaces : PascalCase avec suffixe descriptif (`ProjectCardProps`)
+- Constantes : UPPER_SNAKE_CASE (`FLOATING_CARDS`, `SKILL_META`)
+
+### Composants
+- Server Components par defaut, `"use client"` uniquement si necessaire
+- Named exports (sauf `page.tsx` qui requiert default export)
+- Props toujours typees via interface
+- Pas de `any`
+
+### Styles
+- Tailwind CSS uniquement, pas de CSS modules ni de styled-components
+- Classes dans l'ordre : layout > dimensions > spacing > typo > colors > effects
+- Pas de styles inline sauf cas dynamique justifie (couleur par projet)
+
+### Donnees
+- Toutes les donnees dans `src/content/data.ts`
+- Types exportes pour chaque structure
+- Icones references par nom de composant Lucide (string), pas par import direct dans data
+
+### i18n
+- Cles de traduction en anglais snake_case (`hero.name_bubble`, `projects.view_detail`)
+- Toujours les deux locales (fr + en)
+- Pas de texte en dur dans les composants, tout passe par `useTranslations`
+
+## Commits (Conventional Commits)
+
+Format : `type(scope): description en francais`
+Types : `feat`, `fix`, `refactor`, `docs`, `test`, `chore`, `style`, `perf`
+Premiere ligne <= 72 caracteres.
+Scope : `ui`, `data`, `i18n`, `seo`, `a11y`
+
+## Git Workflow
+
+- Branche active : `feat/nextjs-portfolio`
+- `master` : ancienne version HTML statique
+- Remote : `origin` -> `https://github.com/Simiamine/Portfolio.git`
+
+## Anti-patterns a eviter
+
+- Emojis (voir regle #1)
+- Dark patterns UX
+- Animations gratuites sans justification UX
+- Texte en dur (bypasser i18n)
+- Composants > 200 lignes (extraire en sous-composants)
+- Fichiers > 300 lignes (refactoriser)
