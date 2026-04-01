@@ -9,6 +9,7 @@ export interface Project {
   featured: boolean;
   icon: string;
   color: string;
+  logo?: string;
 }
 
 export interface Experience {
@@ -38,6 +39,7 @@ export const PROJECTS: Project[] = [
     title: "PortfoliA",
     icon: "Target",
     color: "#6366f1",
+    logo: "/images/logos/portfolia.png",
     tagline: {
       fr: "Plateforme d'identite professionnelle",
       en: "Professional identity platform",
@@ -63,6 +65,7 @@ export const PROJECTS: Project[] = [
     title: "Deviscan",
     icon: "FileSearch",
     color: "#f59e0b",
+    logo: "/images/logos/deviscan.png",
     tagline: {
       fr: "Micro-SaaS d'extraction de devis par IA",
       en: "AI-powered quote extraction Micro-SaaS",
@@ -88,6 +91,7 @@ export const PROJECTS: Project[] = [
     title: "RhaniA",
     icon: "Bot",
     color: "#10b981",
+    logo: "/images/logos/rhania.png",
     tagline: {
       fr: "Plateforme de recrutement intelligente",
       en: "Intelligent recruitment platform",
