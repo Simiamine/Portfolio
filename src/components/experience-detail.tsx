@@ -25,7 +25,7 @@ export function ExperienceDetail() {
           </h2>
         </motion.div>
 
-        <div className="space-y-8">
+        <div className="grid gap-6 md:grid-cols-2">
           {EXPERIENCES.map((exp, index) => (
             <motion.div
               key={exp.id}
@@ -34,32 +34,35 @@ export function ExperienceDetail() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.08 }}
-              className="scroll-mt-20 rounded-xl border border-border bg-card p-6"
+              className="scroll-mt-20 rounded-xl border border-border bg-card p-5 hover:shadow-md hover:border-primary-light/20 transition-all"
             >
-              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
-                <div>
-                  <h3 className="text-lg font-semibold text-foreground">
-                    {exp.company}
-                    <span className="font-normal text-muted">
-                      {" "}· {exp.location}
+              <div className="flex items-start gap-3 mb-3">
+                <span className="text-2xl shrink-0">{exp.emoji}</span>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-start justify-between gap-2">
+                    <h3 className="text-base font-semibold text-foreground leading-tight">
+                      {exp.company}
+                      <span className="font-normal text-muted text-sm">
+                        {" "}· {exp.location}
+                      </span>
+                    </h3>
+                    <span className="text-xs font-mono text-muted shrink-0 mt-0.5">
+                      {exp.period}
                     </span>
-                  </h3>
-                  <p className="text-sm text-primary-light font-medium">
+                  </div>
+                  <p className="text-sm text-primary-light font-medium mt-0.5">
                     {exp.role[locale]}
                   </p>
                 </div>
-                <span className="text-xs font-mono text-muted shrink-0">
-                  {exp.period}
-                </span>
               </div>
 
-              <ul className="space-y-1.5">
+              <ul className="space-y-1 ml-9">
                 {exp.description[locale].map((desc) => (
                   <li
                     key={desc}
-                    className="flex items-start gap-2 text-sm text-muted"
+                    className="flex items-start gap-2 text-xs text-muted leading-relaxed"
                   >
-                    <span className="w-1 h-1 rounded-full bg-primary-light mt-2 shrink-0" />
+                    <span className="w-1 h-1 rounded-full bg-primary-light mt-1.5 shrink-0" />
                     {desc}
                   </li>
                 ))}

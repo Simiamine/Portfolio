@@ -7,6 +7,8 @@ export interface Project {
   github?: string;
   url?: string;
   featured: boolean;
+  emoji: string;
+  color: string;
 }
 
 export interface Experience {
@@ -16,6 +18,7 @@ export interface Experience {
   location: string;
   period: string;
   description: { fr: string[]; en: string[] };
+  emoji: string;
 }
 
 export interface Education {
@@ -24,12 +27,15 @@ export interface Education {
   degree: { fr: string; en: string };
   period: string;
   details: { fr: string[]; en: string[] };
+  emoji: string;
 }
 
 export const PROJECTS: Project[] = [
   {
     slug: "portfolia",
     title: "PortfoliA",
+    emoji: "🎯",
+    color: "#6366f1",
     tagline: {
       fr: "Plateforme d'identité professionnelle",
       en: "Professional identity platform",
@@ -53,6 +59,8 @@ export const PROJECTS: Project[] = [
   {
     slug: "deviscan",
     title: "Deviscan",
+    emoji: "📄",
+    color: "#f59e0b",
     tagline: {
       fr: "Micro-SaaS d'extraction de devis par IA",
       en: "AI-powered quote extraction Micro-SaaS",
@@ -76,6 +84,8 @@ export const PROJECTS: Project[] = [
   {
     slug: "rhania",
     title: "RhaniA",
+    emoji: "🤖",
+    color: "#10b981",
     tagline: {
       fr: "Plateforme de recrutement intelligente",
       en: "Intelligent recruitment platform",
@@ -102,11 +112,13 @@ export interface SmallProject {
   description: { fr: string; en: string };
   tech: string;
   github: string;
+  emoji: string;
 }
 
 export const SMALL_PROJECTS: SmallProject[] = [
   {
     title: "RLProject",
+    emoji: "🏎️",
     description: {
       fr: "Reinforcement Learning avec Highway-env (DQN, PPO)",
       en: "Reinforcement Learning with Highway-env (DQN, PPO)",
@@ -116,6 +128,7 @@ export const SMALL_PROJECTS: SmallProject[] = [
   },
   {
     title: "Electric Bus ML",
+    emoji: "🔋",
     description: {
       fr: "Prédiction de consommation de bus scolaires électriques",
       en: "Electric school bus consumption prediction",
@@ -125,6 +138,7 @@ export const SMALL_PROJECTS: SmallProject[] = [
   },
   {
     title: "Used Cars Pricing",
+    emoji: "🚗",
     description: {
       fr: "Prédiction de prix de voitures d'occasion",
       en: "Used car price prediction model",
@@ -134,6 +148,7 @@ export const SMALL_PROJECTS: SmallProject[] = [
   },
   {
     title: "Diabetes ML",
+    emoji: "🩺",
     description: {
       fr: "Classification du diabète (Logistic Reg, MLP, Grid Search)",
       en: "Diabetes classification (Logistic Reg, MLP, Grid Search)",
@@ -143,6 +158,7 @@ export const SMALL_PROJECTS: SmallProject[] = [
   },
   {
     title: "ProjetDataLakes",
+    emoji: "🗄️",
     description: {
       fr: "Architecture Data Lake avec ingestion et transformations",
       en: "Data Lake architecture with ingestion and transformations",
@@ -152,6 +168,7 @@ export const SMALL_PROJECTS: SmallProject[] = [
   },
   {
     title: "ProjetNoSQL",
+    emoji: "📊",
     description: {
       fr: "Base de données NoSQL et requêtes avancées",
       en: "NoSQL database and advanced queries",
@@ -161,6 +178,7 @@ export const SMALL_PROJECTS: SmallProject[] = [
   },
   {
     title: "LuxuryPropertyDB",
+    emoji: "🏠",
     description: {
       fr: "Modélisation de propriétés de luxe en Neo4j (Cypher)",
       en: "Luxury property modeling in Neo4j (Cypher)",
@@ -170,6 +188,7 @@ export const SMALL_PROJECTS: SmallProject[] = [
   },
   {
     title: "LHC Particle Data",
+    emoji: "⚛️",
     description: {
       fr: "Analyse multivariée (PCA, CA, MCA, FAMD) sur données du LHC",
       en: "Multivariate analysis (PCA, CA, MCA, FAMD) on LHC data",
@@ -179,6 +198,7 @@ export const SMALL_PROJECTS: SmallProject[] = [
   },
   {
     title: "Zelda (Java)",
+    emoji: "🗡️",
     description: {
       fr: "Jeu d'action inspiré de Zelda: A Link to the Past",
       en: "Action game inspired by Zelda: A Link to the Past",
@@ -188,6 +208,7 @@ export const SMALL_PROJECTS: SmallProject[] = [
   },
   {
     title: "Pokeshop",
+    emoji: "🛒",
     description: {
       fr: "E-commerce PHP avec API, panier et admin",
       en: "PHP e-commerce with API, cart and admin",
@@ -197,6 +218,7 @@ export const SMALL_PROJECTS: SmallProject[] = [
   },
   {
     title: "Éditeur d'automates",
+    emoji: "⚙️",
     description: {
       fr: "Manipulation d'automates d'états finis",
       en: "Finite state automata manipulation",
@@ -206,6 +228,7 @@ export const SMALL_PROJECTS: SmallProject[] = [
   },
   {
     title: "Motus",
+    emoji: "🔤",
     description: {
       fr: "Jeu de mots inspiré de Motus / Wordle",
       en: "Word game inspired by Motus / Wordle",
@@ -273,6 +296,7 @@ export const EXPERIENCES: Experience[] = [
   {
     id: "sanofi",
     company: "Sanofi",
+    emoji: "💊",
     role: { fr: "Data & ML Engineer (Alternance)", en: "Data & ML Engineer (Work-Study)" },
     location: "Lyon",
     period: "Oct. 2025 — Present",
@@ -296,6 +320,7 @@ export const EXPERIENCES: Experience[] = [
   {
     id: "ratp-auto",
     company: "RATP",
+    emoji: "🚍",
     role: {
       fr: "Lead Data Engineer — Véhicules autonomes (Alternance)",
       en: "Lead Data Engineer — Autonomous Vehicles (Work-Study)",
@@ -322,6 +347,7 @@ export const EXPERIENCES: Experience[] = [
   {
     id: "ratp-drh",
     company: "RATP",
+    emoji: "🚇",
     role: { fr: "Data Analyst — DRH (Apprentissage)", en: "Data Analyst — HR (Apprenticeship)" },
     location: "Paris",
     period: "Sept. 2023 — Août 2024",
@@ -343,6 +369,7 @@ export const EXPERIENCES: Experience[] = [
   {
     id: "ambroise-pare",
     company: "Groupe Ambroise Paré",
+    emoji: "🏥",
     role: { fr: "Logisticien (Stage)", en: "Logistics Officer (Internship)" },
     location: "Clichy-sous-Bois",
     period: "Juil. — Août 2022",
@@ -365,6 +392,7 @@ export const EDUCATION: Education[] = [
   {
     id: "efrei",
     school: "EFREI Paris",
+    emoji: "🎓",
     degree: {
       fr: "Diplôme d'Ingénieur — Big Data & Machine Learning",
       en: "Engineering Degree — Big Data & Machine Learning",
@@ -392,6 +420,7 @@ export const EDUCATION: Education[] = [
   {
     id: "ukm",
     school: "UKM (Universiti Kebangsaan Malaysia)",
+    emoji: "🇲🇾",
     degree: {
       fr: "Stage Recherche en IA — Projet AL-Warisan",
       en: "AI Research Internship — AL-Warisan Project",
@@ -417,6 +446,7 @@ export const EDUCATION: Education[] = [
   {
     id: "cytech",
     school: "CY Tech",
+    emoji: "💻",
     degree: {
       fr: "Ingénierie Informatique",
       en: "Computer Engineering",
@@ -440,6 +470,7 @@ export const EDUCATION: Education[] = [
   {
     id: "insa",
     school: "INSA Rouen",
+    emoji: "📐",
     degree: {
       fr: "Cycle préparatoire — Sciences de l'Ingénieur",
       en: "Preparatory cycle — Engineering Sciences",

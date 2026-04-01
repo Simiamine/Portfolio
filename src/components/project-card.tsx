@@ -23,8 +23,8 @@ export function ProjectCard({ project, index, ctaLabel }: ProjectCardProps) {
     const rect = card.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
-    const rotateX = ((y - rect.height / 2) / rect.height) * -8;
-    const rotateY = ((x - rect.width / 2) / rect.width) * 8;
+    const rotateX = ((y - rect.height / 2) / rect.height) * -6;
+    const rotateY = ((x - rect.width / 2) / rect.width) * 6;
     card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
   }
 
@@ -39,42 +39,53 @@ export function ProjectCard({ project, index, ctaLabel }: ProjectCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.4, delay: index * 0.1 }}
+      className="h-full"
     >
-      <Link href={`/projets/${project.slug}`} className="block group">
+      <Link href={`/projets/${project.slug}`} className="block group h-full">
         <div
           ref={cardRef}
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
-          className="glow-card rounded-xl border border-border bg-card p-6 h-full transition-shadow duration-300"
+          className="glow-card rounded-xl border border-border bg-card h-full flex flex-col transition-shadow duration-300"
           style={{ willChange: "transform" }}
         >
-          <div className="flex items-start justify-between mb-4">
-            <h3 className="font-serif text-2xl tracking-tight">
-              {project.title}
-            </h3>
-            <ArrowUpRight
-              size={18}
-              className="text-muted group-hover:text-primary-light transition-colors shrink-0 mt-1"
-            />
-          </div>
+          <div
+            className="h-2 rounded-t-xl"
+            style={{ background: project.color }}
+          />
 
-          <p className="text-sm text-primary-light font-medium mb-3">
-            {project.tagline[locale]}
-          </p>
+          <div className="p-6 flex flex-col flex-1">
+            <div className="flex items-start justify-between mb-3">
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">{project.emoji}</span>
+                <h3 className="font-serif text-2xl tracking-tight">
+                  {project.title}
+                </h3>
+              </div>
+              <ArrowUpRight
+                size={18}
+                className="text-muted group-hover:text-primary-light transition-colors shrink-0 mt-1"
+              />
+            </div>
 
-          <p className="text-sm text-muted leading-relaxed mb-5">
-            {project.description[locale]}
-          </p>
+            <p className="text-sm font-semibold mb-3" style={{ color: project.color }}>
+              {project.tagline[locale]}
+            </p>
 
-          <div className="flex flex-wrap gap-1.5">
-            {project.stack.map((tech) => (
-              <span
-                key={tech}
-                className="text-xs font-mono px-2 py-0.5 rounded bg-background text-muted border border-border"
-              >
-                {tech}
-              </span>
-            ))}
+            <p className="text-sm text-muted leading-relaxed mb-5 flex-1">
+              {project.description[locale]}
+            </p>
+
+            <div className="flex flex-wrap gap-1.5 mt-auto">
+              {project.stack.map((tech) => (
+                <span
+                  key={tech}
+                  className="text-xs font-mono px-2 py-0.5 rounded bg-background text-muted border border-border"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </Link>
