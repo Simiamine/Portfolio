@@ -1,0 +1,37 @@
+## Context
+
+SMBs receive dozens of supplier quotes every month — as PDFs, sometimes scanned, never in the same format. Buyers spend hours manually copying line items into Excel to compare offers.
+
+## The problem
+
+No affordable solution to **automatically extract** structured data from a quote PDF (lines, quantities, unit prices, VAT, conditions) and make it actionable.
+
+## Technical solution
+
+Deviscan is a micro-SaaS that turns a quote PDF into structured data in seconds.
+
+### Architecture
+
+- **Frontend**: Next.js 16 (App Router), TypeScript, Tailwind CSS, Zustand
+- **Backend**: FastAPI (Python), SQLAlchemy 2 async, Alembic
+- **Auth**: Supabase (JWT via JWKS)
+- **AI**: Model cascade — Gemini Flash-Lite → Gemini Pro → Claude (fallback)
+- **Storage**: Cloudflare R2 (S3-compatible)
+- **Billing**: LemonSqueezy (HMAC webhooks)
+
+### Key features
+
+- Multi-file upload (PDF, DOCX, images)
+- AI extraction with scanned PDF handling (image preprocessing)
+- Manual review and edit of extracted line items
+- Export to Excel, CSV and **Factur-X** (EN 16931 standard)
+- Side-by-side quote comparison
+- Plan-based quotas (free / pro / business)
+- Batch multi-document export
+
+### Notable technical details
+
+- AI cascade with automatic provider fallback
+- CII XML generation for Factur-X / PDF-A compliance
+- Per-endpoint rate limiting (slowapi)
+- Backend test suite covering auth, billing, extraction, export

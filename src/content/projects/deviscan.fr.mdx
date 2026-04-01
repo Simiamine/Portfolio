@@ -1,0 +1,37 @@
+## Contexte
+
+Les PME reçoivent des dizaines de devis fournisseurs chaque mois — en PDF, parfois scannés, jamais dans le même format. Les acheteurs passent des heures à recopier manuellement les lignes dans Excel pour comparer les offres.
+
+## Le problème
+
+Pas de solution abordable pour **extraire automatiquement** les données structurées d'un devis PDF (lignes, quantités, prix unitaires, TVA, conditions) et les rendre exploitables.
+
+## Solution technique
+
+Deviscan est un micro-SaaS qui transforme un PDF de devis en données structurées en quelques secondes.
+
+### Architecture
+
+- **Frontend** : Next.js 16 (App Router), TypeScript, Tailwind CSS, Zustand
+- **Backend** : FastAPI (Python), SQLAlchemy 2 async, Alembic
+- **Auth** : Supabase (JWT via JWKS)
+- **IA** : Cascade de modèles — Gemini Flash-Lite → Gemini Pro → Claude (fallback)
+- **Stockage** : Cloudflare R2 (S3-compatible)
+- **Facturation** : LemonSqueezy (webhooks HMAC)
+
+### Fonctionnalités clés
+
+- Upload multi-fichiers (PDF, DOCX, images)
+- Extraction IA avec gestion des PDF scannés (prétraitement en images)
+- Relecture et édition manuelle des lignes extraites
+- Export Excel, CSV et **Factur-X** (norme EN 16931)
+- Comparaison de devis côte à côte
+- Quotas par plan (free / pro / business)
+- Export batch multi-documents
+
+### Points techniques notables
+
+- Cascade IA avec fallback automatique entre providers
+- Génération XML CII pour Factur-X / PDF-A
+- Rate limiting par endpoint (slowapi)
+- Tests backend sur auth, billing, extraction, export

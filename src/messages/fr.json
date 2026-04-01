@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "about": "À propos",
+    "projects": "Projets",
+    "skills": "Compétences",
+    "journey": "Parcours",
+    "resume": "Mon CV"
+  },
+  "hero": {
+    "greeting": "Bonjour, je suis",
+    "name": "Amine M'Zali",
+    "title": "Futur Ingénieur Data",
+    "subtitle": "EFREI Paris · Sanofi · Disponible sept. 2026",
+    "description": "Je construis des pipelines data, des modèles ML et des produits web — de l'ingestion à la prédiction.",
+    "cta_projects": "Voir mes projets",
+    "cta_resume": "Télécharger mon CV"
+  },
+  "about": {
+    "label": "À propos",
+    "title": "Qui suis-je ?",
+    "text": "En dernière année d'école d'ingénieur à l'EFREI Paris, spécialisé Big Data et Machine Learning, je cumule 3 ans d'alternance dans la data — transport (RATP, véhicules autonomes), pharmaceutique (Sanofi) et recherche internationale (UKM Malaisie). J'ai aussi conçu et développé trois produits web complets en parallèle.",
+    "highlights": {
+      "analysis": "Data Analysis",
+      "engineering": "Data Engineering",
+      "science": "Data Science",
+      "innovative": "Innovant",
+      "collaborative": "Collaboratif",
+      "curious": "Curieux"
+    }
+  },
+  "projects": {
+    "label": "Réalisations",
+    "title": "Projets principaux",
+    "other_title": "Autres projets",
+    "view_detail": "Voir le détail",
+    "view_github": "GitHub",
+    "more_github": "Plus de projets sur mon GitHub"
+  },
+  "skills": {
+    "label": "Compétences",
+    "title": "Stack technique",
+    "data_engineering": "Data Engineering",
+    "ml_ai": "ML & IA",
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "infra": "Infra & DevOps",
+    "languages": "Langues",
+    "certifications": "Certifications"
+  },
+  "journey": {
+    "label": "Parcours",
+    "title": "Formation & Expérience",
+    "education": "Formation",
+    "experience": "Expérience"
+  },
+  "footer": {
+    "available": "Disponible septembre 2026",
+    "rights": "Tous droits réservés."
+  }
+}

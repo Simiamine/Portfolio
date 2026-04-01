@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "journey": "Journey",
+    "resume": "My Resume"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Amine M'Zali",
+    "title": "Future Data Engineer",
+    "subtitle": "EFREI Paris · Sanofi · Available Sept. 2026",
+    "description": "I build data pipelines, ML models, and web products — from ingestion to prediction.",
+    "cta_projects": "View my projects",
+    "cta_resume": "Download my resume"
+  },
+  "about": {
+    "label": "About",
+    "title": "Who am I?",
+    "text": "In my final year at EFREI Paris, specializing in Big Data and Machine Learning, I bring 3 years of work-study experience in data — transportation (RATP, autonomous vehicles), pharmaceutical (Sanofi), and international research (UKM Malaysia). I've also designed and built three complete web products on the side.",
+    "highlights": {
+      "analysis": "Data Analysis",
+      "engineering": "Data Engineering",
+      "science": "Data Science",
+      "innovative": "Innovative",
+      "collaborative": "Collaborative",
+      "curious": "Curious"
+    }
+  },
+  "projects": {
+    "label": "Work",
+    "title": "Main projects",
+    "other_title": "Other projects",
+    "view_detail": "View details",
+    "view_github": "GitHub",
+    "more_github": "More projects on my GitHub"
+  },
+  "skills": {
+    "label": "Skills",
+    "title": "Tech stack",
+    "data_engineering": "Data Engineering",
+    "ml_ai": "ML & AI",
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "infra": "Infra & DevOps",
+    "languages": "Languages",
+    "certifications": "Certifications"
+  },
+  "journey": {
+    "label": "Journey",
+    "title": "Education & Experience",
+    "education": "Education",
+    "experience": "Experience"
+  },
+  "footer": {
+    "available": "Available September 2026",
+    "rights": "All rights reserved."
+  }
+}
