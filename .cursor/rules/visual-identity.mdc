@@ -1,0 +1,141 @@
+---
+description: Identite visuelle du portfolio personnel d'Amine M'Zali. Palette marron/beige, typographie, spacing, composants. S'applique a tous les fichiers frontend.
+alwaysApply: true
+---
+
+# Portfolio Amine M'Zali — Identite Visuelle
+
+---
+
+## 1. PHILOSOPHIE
+
+Ce portfolio est un **outil de presentation professionnelle** pour un Data & ML Engineer.
+Le design doit etre **sobre et serieux** avec des accents chaleureux marron/beige.
+
+### Principes directeurs
+- **Chaleur maitrisee** : palette marron/beige qui evoque la fiabilite et la maturite.
+- **Sobriete** : le contenu prime, pas les effets visuels.
+- **Lisibilite absolue** : contraste eleve, hierarchie claire.
+- **Animations justifiees** : uniquement pour guider l'oeil (scroll reveal, hover), jamais gratuites.
+
+### Ce qu'on n'est PAS
+- Un portfolio "creatif" de designer avec des effets partout
+- Un template generique Tailwind/shadcn
+- Un site avec des emojis — INTERDIT (utiliser des icones Lucide uniquement)
+
+---
+
+## 2. REGLE ABSOLUE : ZERO EMOJI
+
+**Les emojis sont STRICTEMENT INTERDITS dans tout le codebase.**
+
+- Pas d'emoji dans les donnees (`data.ts`)
+- Pas d'emoji dans les composants
+- Pas d'emoji dans les textes, labels, badges
+- Utiliser **exclusivement des icones Lucide React** pour tout element visuel
+- Chaque entite (projet, experience, education, skill) utilise une icone Lucide via son nom de composant
+
+---
+
+## 3. PALETTE DE COULEURS
+
+### Tokens CSS (definis dans globals.css)
+
+| Role | Variable CSS | Valeur Light | Usage |
+|------|-------------|-------------|-------|
+| **Primary Dark** | `--primary-dark` | `#5e2933` | Titres, boutons primaires |
+| **Primary Light** | `--primary-light` | `#815443` | Accents, labels, taglines |
+| **Secondary Beige** | `--secondary-beige` | `#d2bdb1` | Hover, highlights, badges |
+| **Accent Brown** | `--accent-brown` | `#7d5e4c` | Texte accent, bordures hover |
+| **Background** | `--background` | `#f7f6f6` | Fond de page |
+| **Card** | `--card` | `#ffffff` | Cartes et surfaces |
+| **Foreground** | `--foreground` | `#333333` | Texte principal |
+| **Muted** | `--muted` | `#666666` | Texte secondaire |
+| **Border** | `--border` | `rgba(0,0,0,0.08)` | Bordures subtiles |
+
+### Dark mode
+
+| Role | Valeur Dark |
+|------|------------|
+| **Background** | `#0a0a0a` |
+| **Card** | `#141414` |
+| **Foreground** | `#ffffff` |
+| **Muted** | `#b0b0b0` |
+| **Border** | `rgba(255,255,255,0.08)` |
+
+### Hero
+- Fond : gradient sombre `linear-gradient(145deg, #3a0f17, #5e2933, #815443)`
+- Texte : blanc pur sur fond sombre, bulles blanches solides
+- Pas de transparence excessive qui rend le texte illisible
+
+---
+
+## 4. TYPOGRAPHIE
+
+### Polices
+- **DM Sans** (`--font-dm-sans`) : corps de texte, labels, descriptions
+- **Instrument Serif** (`--font-instrument-serif`) : titres de sections (H1, H2)
+- **Geist Mono** (`--font-geist-mono`) : tags tech, periodes, code
+
+### Echelle
+
+| Element | Classe | Usage |
+|---------|--------|-------|
+| H1 hero | `text-4xl sm:text-5xl font-serif` | Titre principal |
+| H2 section | `text-3xl sm:text-4xl font-serif tracking-tight` | Sections |
+| H3 carte | `text-lg font-semibold` | Titres de cartes |
+| Body | `text-base` | Texte courant |
+| Small | `text-sm` | Descriptions |
+| Caption/Tag | `text-xs font-mono` | Tags, periodes |
+
+---
+
+## 5. COMPOSANTS
+
+### Cartes projets
+- Hauteur uniforme (`items-stretch` + `flex flex-col flex-1`)
+- Barre de couleur en haut de chaque carte (couleur propre au projet)
+- Icone Lucide + titre + tagline coloree + description + tags tech
+- Effet 3D tilt au hover (perspective 800px, rotation 6deg max)
+- Ombre glow au hover
+
+### Timeline (Journey)
+- Timeline bifurquee : education a gauche, experience a droite
+- Paires chronologiques alignees par annee
+- Ligne verticale centrale avec gradient
+- Chaque entree a une icone Lucide, cliquable pour scroller au detail
+
+### Section details (Education / Experience)
+- Grille 2 colonnes (`md:grid-cols-2`)
+- Cartes compactes avec icone + titre + periode + liste de details
+- Hover : ombre + bordure accent
+
+### Skills
+- Cartes par groupe avec icone Lucide dediee
+- Tags tech monochromes avec hover
+
+---
+
+## 6. ICONOGRAPHIE
+
+- **Lucide React** exclusivement — pas d'emojis, pas de Font Awesome, pas d'images
+- Taille standard : `size={18}` inline, `size={20}` dans les cartes
+- Couleur : `text-primary-light` ou `text-muted`, herite du parent
+- Chaque projet, experience, education a une icone Lucide assignee dans `data.ts`
+
+---
+
+## 7. ANIMATIONS
+
+### Autorisees
+- `framer-motion` : fade-in au scroll (`whileInView`), stagger sur les grilles
+- `transition-all` : hover sur cartes et boutons
+- Floating cards dans le hero (mouvement vertical doux)
+- Scroll indicator anime
+
+### Interdites
+- Animations de texte lettre par lettre
+- Parallax
+- Compteurs qui defilent
+- Confetti, particules
+- Preloader / splash screen

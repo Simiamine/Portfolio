@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { useLocale } from "next-intl";
 import { Link } from "@/lib/i18n/navigation";
+import { getIcon } from "@/lib/icons";
 import type { Project } from "@/content/data";
 
 interface ProjectCardProps {
@@ -16,6 +17,7 @@ interface ProjectCardProps {
 export function ProjectCard({ project, index, ctaLabel }: ProjectCardProps) {
   const locale = useLocale() as "fr" | "en";
   const cardRef = useRef<HTMLDivElement>(null);
+  const Icon = getIcon(project.icon);
 
   function handleMouseMove(e: MouseEvent<HTMLDivElement>) {
     const card = cardRef.current;
@@ -57,7 +59,12 @@ export function ProjectCard({ project, index, ctaLabel }: ProjectCardProps) {
           <div className="p-6 flex flex-col flex-1">
             <div className="flex items-start justify-between mb-3">
               <div className="flex items-center gap-3">
-                <span className="text-2xl">{project.emoji}</span>
+                <div
+                  className="w-9 h-9 rounded-lg flex items-center justify-center"
+                  style={{ background: `${project.color}15` }}
+                >
+                  <Icon size={18} style={{ color: project.color }} />
+                </div>
                 <h3 className="font-serif text-2xl tracking-tight">
                   {project.title}
                 </h3>

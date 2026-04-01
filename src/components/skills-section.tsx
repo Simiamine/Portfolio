@@ -2,28 +2,20 @@
 
 import { useTranslations, useLocale } from "next-intl";
 import { motion } from "framer-motion";
+import { Globe, Award } from "lucide-react";
 import { SKILLS, LANGUAGES, CERTIFICATIONS } from "@/content/data";
-import { Award, Globe } from "lucide-react";
-
-const SKILL_META: Record<string, { emoji: string; color: string }> = {
-  data_engineering: { emoji: "🔧", color: "#f59e0b" },
-  ml_ai: { emoji: "🧠", color: "#8b5cf6" },
-  backend: { emoji: "⚡", color: "#10b981" },
-  frontend: { emoji: "🎨", color: "#3b82f6" },
-  infra: { emoji: "☁️", color: "#ef4444" },
-};
+import { SKILL_ICONS } from "@/lib/icons";
+import type { LucideIcon } from "lucide-react";
 
 function SkillGroup({
   title,
   items,
-  emoji,
-  color,
+  icon: Icon,
   index,
 }: {
   title: string;
   items: string[];
-  emoji: string;
-  color: string;
+  icon: LucideIcon;
   index: number;
 }) {
   return (
@@ -35,7 +27,9 @@ function SkillGroup({
       className="rounded-xl border border-border bg-card p-5 hover:shadow-md hover:border-primary-light/20 transition-all"
     >
       <div className="flex items-center gap-2 mb-3">
-        <span className="text-lg">{emoji}</span>
+        <div className="w-8 h-8 rounded-lg bg-primary-light/10 flex items-center justify-center">
+          <Icon size={16} className="text-primary-light" />
+        </div>
         <h3 className="text-sm font-bold text-foreground">{title}</h3>
       </div>
       <div className="flex flex-wrap gap-1.5">
@@ -82,19 +76,15 @@ export function SkillsSection() {
         </motion.div>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 mb-12">
-          {groups.map(({ key, items }, index) => {
-            const meta = SKILL_META[key];
-            return (
-              <SkillGroup
-                key={key}
-                title={t(key)}
-                items={items}
-                emoji={meta.emoji}
-                color={meta.color}
-                index={index}
-              />
-            );
-          })}
+          {groups.map(({ key, items }, index) => (
+            <SkillGroup
+              key={key}
+              title={t(key)}
+              items={items}
+              icon={SKILL_ICONS[key]}
+              index={index}
+            />
+          ))}
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2">
@@ -106,7 +96,9 @@ export function SkillsSection() {
             className="rounded-xl border border-border bg-card p-5"
           >
             <div className="flex items-center gap-2 mb-4">
-              <Globe size={18} className="text-primary-light" />
+              <div className="w-8 h-8 rounded-lg bg-primary-light/10 flex items-center justify-center">
+                <Globe size={16} className="text-primary-light" />
+              </div>
               <h3 className="text-sm font-bold text-foreground">
                 {t("languages")}
               </h3>
@@ -134,7 +126,9 @@ export function SkillsSection() {
             className="rounded-xl border border-border bg-card p-5"
           >
             <div className="flex items-center gap-2 mb-4">
-              <Award size={18} className="text-primary-light" />
+              <div className="w-8 h-8 rounded-lg bg-primary-light/10 flex items-center justify-center">
+                <Award size={16} className="text-primary-light" />
+              </div>
               <h3 className="text-sm font-bold text-foreground">
                 {t("certifications")}
               </h3>
@@ -142,7 +136,7 @@ export function SkillsSection() {
             <div className="space-y-3">
               {CERTIFICATIONS.map((cert) => (
                 <div key={cert} className="flex items-center gap-2">
-                  <span className="text-lg">🏅</span>
+                  <Award size={14} className="text-primary-light shrink-0" />
                   <p className="text-sm font-mono text-muted">{cert}</p>
                 </div>
               ))}

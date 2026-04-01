@@ -7,7 +7,7 @@ export interface Project {
   github?: string;
   url?: string;
   featured: boolean;
-  emoji: string;
+  icon: string;
   color: string;
 }
 
@@ -18,7 +18,7 @@ export interface Experience {
   location: string;
   period: string;
   description: { fr: string[]; en: string[] };
-  emoji: string;
+  icon: string;
 }
 
 export interface Education {
@@ -27,21 +27,21 @@ export interface Education {
   degree: { fr: string; en: string };
   period: string;
   details: { fr: string[]; en: string[] };
-  emoji: string;
+  icon: string;
 }
 
 export const PROJECTS: Project[] = [
   {
     slug: "portfolia",
     title: "PortfoliA",
-    emoji: "🎯",
+    icon: "Target",
     color: "#6366f1",
     tagline: {
-      fr: "Plateforme d'identité professionnelle",
+      fr: "Plateforme d'identite professionnelle",
       en: "Professional identity platform",
     },
     description: {
-      fr: "Un profil unique qui alimente CV, portfolio web et recherche d'emploi. Import LinkedIn/GitHub, matching sémantique, génération de lettres de motivation, scraping d'offres, gamification, module B2B. ~50 modules de routes backend. Projet EFREI en équipe de 5, rôle de Founding Technical Lead.",
+      fr: "Un profil unique qui alimente CV, portfolio web et recherche d'emploi. Import LinkedIn/GitHub, matching semantique, generation de lettres de motivation, scraping d'offres, gamification, module B2B. ~50 modules de routes backend. Projet EFREI en equipe de 5, role de Founding Technical Lead.",
       en: "A single profile that feeds your resume, web portfolio, and job search. LinkedIn/GitHub import, semantic matching, cover letter generation, job scraping, gamification, B2B module. ~50 backend route modules. EFREI team project (5 people), Founding Technical Lead role.",
     },
     stack: [
@@ -59,14 +59,14 @@ export const PROJECTS: Project[] = [
   {
     slug: "deviscan",
     title: "Deviscan",
-    emoji: "📄",
+    icon: "FileSearch",
     color: "#f59e0b",
     tagline: {
       fr: "Micro-SaaS d'extraction de devis par IA",
       en: "AI-powered quote extraction Micro-SaaS",
     },
     description: {
-      fr: "Extraction automatique de données structurées depuis des PDF de devis fournisseurs. Cascade de modèles IA (Gemini, Claude), exports Excel/CSV/Factur-X, quotas par plan.",
+      fr: "Extraction automatique de donnees structurees depuis des PDF de devis fournisseurs. Cascade de modeles IA (Gemini, Claude), exports Excel/CSV/Factur-X, quotas par plan.",
       en: "Automatic extraction of structured data from supplier quote PDFs. AI model cascade (Gemini, Claude), Excel/CSV/Factur-X exports, plan-based quotas.",
     },
     stack: [
@@ -84,14 +84,14 @@ export const PROJECTS: Project[] = [
   {
     slug: "rhania",
     title: "RhaniA",
-    emoji: "🤖",
+    icon: "Bot",
     color: "#10b981",
     tagline: {
       fr: "Plateforme de recrutement intelligente",
       en: "Intelligent recruitment platform",
     },
     description: {
-      fr: "Matching candidat/offre hybride : similarité vectorielle (pgvector) + scoring explicable multi-critères. Parsing CV par vision IA, génération de questions d'entretien par LLM.",
+      fr: "Matching candidat/offre hybride : similarite vectorielle (pgvector) + scoring explicable multi-criteres. Parsing CV par vision IA, generation de questions d'entretien par LLM.",
       en: "Hybrid candidate/job matching: vector similarity (pgvector) + explainable multi-criteria scoring. AI vision CV parsing, LLM-generated interview questions.",
     },
     stack: [
@@ -112,13 +112,13 @@ export interface SmallProject {
   description: { fr: string; en: string };
   tech: string;
   github: string;
-  emoji: string;
+  icon: string;
 }
 
 export const SMALL_PROJECTS: SmallProject[] = [
   {
     title: "RLProject",
-    emoji: "🏎️",
+    icon: "Gamepad2",
     description: {
       fr: "Reinforcement Learning avec Highway-env (DQN, PPO)",
       en: "Reinforcement Learning with Highway-env (DQN, PPO)",
@@ -128,9 +128,9 @@ export const SMALL_PROJECTS: SmallProject[] = [
   },
   {
     title: "Electric Bus ML",
-    emoji: "🔋",
+    icon: "Zap",
     description: {
-      fr: "Prédiction de consommation de bus scolaires électriques",
+      fr: "Prediction de consommation de bus scolaires electriques",
       en: "Electric school bus consumption prediction",
     },
     tech: "Python",
@@ -138,9 +138,9 @@ export const SMALL_PROJECTS: SmallProject[] = [
   },
   {
     title: "Used Cars Pricing",
-    emoji: "🚗",
+    icon: "Car",
     description: {
-      fr: "Prédiction de prix de voitures d'occasion",
+      fr: "Prediction de prix de voitures d'occasion",
       en: "Used car price prediction model",
     },
     tech: "Python",
@@ -148,9 +148,9 @@ export const SMALL_PROJECTS: SmallProject[] = [
   },
   {
     title: "Diabetes ML",
-    emoji: "🩺",
+    icon: "HeartPulse",
     description: {
-      fr: "Classification du diabète (Logistic Reg, MLP, Grid Search)",
+      fr: "Classification du diabete (Logistic Reg, MLP, Grid Search)",
       en: "Diabetes classification (Logistic Reg, MLP, Grid Search)",
     },
     tech: "Python",
@@ -158,7 +158,7 @@ export const SMALL_PROJECTS: SmallProject[] = [
   },
   {
     title: "ProjetDataLakes",
-    emoji: "🗄️",
+    icon: "Database",
     description: {
       fr: "Architecture Data Lake avec ingestion et transformations",
       en: "Data Lake architecture with ingestion and transformations",
@@ -168,9 +168,9 @@ export const SMALL_PROJECTS: SmallProject[] = [
   },
   {
     title: "ProjetNoSQL",
-    emoji: "📊",
+    icon: "BarChart3",
     description: {
-      fr: "Base de données NoSQL et requêtes avancées",
+      fr: "Base de donnees NoSQL et requetes avancees",
       en: "NoSQL database and advanced queries",
     },
     tech: "Python",
@@ -178,9 +178,9 @@ export const SMALL_PROJECTS: SmallProject[] = [
   },
   {
     title: "LuxuryPropertyDB",
-    emoji: "🏠",
+    icon: "Home",
     description: {
-      fr: "Modélisation de propriétés de luxe en Neo4j (Cypher)",
+      fr: "Modelisation de proprietes de luxe en Neo4j (Cypher)",
       en: "Luxury property modeling in Neo4j (Cypher)",
     },
     tech: "Cypher",
@@ -188,9 +188,9 @@ export const SMALL_PROJECTS: SmallProject[] = [
   },
   {
     title: "LHC Particle Data",
-    emoji: "⚛️",
+    icon: "Atom",
     description: {
-      fr: "Analyse multivariée (PCA, CA, MCA, FAMD) sur données du LHC",
+      fr: "Analyse multivariee (PCA, CA, MCA, FAMD) sur donnees du LHC",
       en: "Multivariate analysis (PCA, CA, MCA, FAMD) on LHC data",
     },
     tech: "Python",
@@ -198,9 +198,9 @@ export const SMALL_PROJECTS: SmallProject[] = [
   },
   {
     title: "Zelda (Java)",
-    emoji: "🗡️",
+    icon: "Sword",
     description: {
-      fr: "Jeu d'action inspiré de Zelda: A Link to the Past",
+      fr: "Jeu d'action inspire de Zelda: A Link to the Past",
       en: "Action game inspired by Zelda: A Link to the Past",
     },
     tech: "Java",
@@ -208,7 +208,7 @@ export const SMALL_PROJECTS: SmallProject[] = [
   },
   {
     title: "Pokeshop",
-    emoji: "🛒",
+    icon: "ShoppingCart",
     description: {
       fr: "E-commerce PHP avec API, panier et admin",
       en: "PHP e-commerce with API, cart and admin",
@@ -217,10 +217,10 @@ export const SMALL_PROJECTS: SmallProject[] = [
     github: "https://github.com/Simiamine/Pokeshop-API-Version",
   },
   {
-    title: "Éditeur d'automates",
-    emoji: "⚙️",
+    title: "Editeur d'automates",
+    icon: "Cog",
     description: {
-      fr: "Manipulation d'automates d'états finis",
+      fr: "Manipulation d'automates d'etats finis",
       en: "Finite state automata manipulation",
     },
     tech: "C",
@@ -228,9 +228,9 @@ export const SMALL_PROJECTS: SmallProject[] = [
   },
   {
     title: "Motus",
-    emoji: "🔤",
+    icon: "Type",
     description: {
-      fr: "Jeu de mots inspiré de Motus / Wordle",
+      fr: "Jeu de mots inspire de Motus / Wordle",
       en: "Word game inspired by Motus / Wordle",
     },
     tech: "FreePascal",
@@ -281,7 +281,7 @@ export const SKILLS = {
 };
 
 export const LANGUAGES = [
-  { name: { fr: "Français", en: "French" }, level: { fr: "Maternel", en: "Native" } },
+  { name: { fr: "Francais", en: "French" }, level: { fr: "Maternel", en: "Native" } },
   { name: { fr: "Anglais", en: "English" }, level: { fr: "C1 / Bilingue", en: "C1 / Bilingual" } },
   { name: { fr: "Arabe", en: "Arabic" }, level: { fr: "Courant", en: "Fluent" } },
   { name: { fr: "Espagnol", en: "Spanish" }, level: { fr: "Basique", en: "Basic" } },
@@ -296,20 +296,20 @@ export const EXPERIENCES: Experience[] = [
   {
     id: "sanofi",
     company: "Sanofi",
-    emoji: "💊",
+    icon: "Pill",
     role: { fr: "Data & ML Engineer (Alternance)", en: "Data & ML Engineer (Work-Study)" },
     location: "Lyon",
     period: "Oct. 2025 — Present",
     description: {
       fr: [
-        "Pipeline d'ingestion serverless (S3 → SQS → Lambda → Parquet → Snowflake)",
-        "Modélisation dbt sur Snowflake, parsers GARAMP multi-format",
+        "Pipeline d'ingestion serverless (S3 -> SQS -> Lambda -> Parquet -> Snowflake)",
+        "Modelisation dbt sur Snowflake, parsers GARAMP multi-format",
         "ML gap assessment (XGBoost, SHAP) pour le transfert technologique",
         "Infrastructure Terraform, CI/CD GitHub Actions + SonarCloud",
-        "Contexte réglementé FDA/EMA — industrie pharmaceutique",
+        "Contexte reglemente FDA/EMA — industrie pharmaceutique",
       ],
       en: [
-        "Serverless ingestion pipeline (S3 → SQS → Lambda → Parquet → Snowflake)",
+        "Serverless ingestion pipeline (S3 -> SQS -> Lambda -> Parquet -> Snowflake)",
         "dbt modeling on Snowflake, multi-format GARAMP parsers",
         "ML gap assessment (XGBoost, SHAP) for technology transfer",
         "Terraform infrastructure, CI/CD with GitHub Actions + SonarCloud",
@@ -320,19 +320,19 @@ export const EXPERIENCES: Experience[] = [
   {
     id: "ratp-auto",
     company: "RATP",
-    emoji: "🚍",
+    icon: "Bus",
     role: {
-      fr: "Lead Data Engineer — Véhicules autonomes (Alternance)",
+      fr: "Lead Data Engineer — Vehicules autonomes (Alternance)",
       en: "Lead Data Engineer — Autonomous Vehicles (Work-Study)",
     },
     location: "Paris",
-    period: "Août 2024 — Sept. 2025",
+    period: "Aout 2024 — Sept. 2025",
     description: {
       fr: [
-        "Conception et implémentation d'une plateforme Data complète sur AWS (seul lead technique)",
-        "Pipelines ETL avec AWS Glue et PySpark pour données temps réel",
+        "Conception et implementation d'une plateforme Data complete sur AWS (seul lead technique)",
+        "Pipelines ETL avec AWS Glue et PySpark pour donnees temps reel",
         "Dashboards Amazon QuickSight pour le suivi de flotte",
-        "Développement d'interfaces de visualisation en React (Vite)",
+        "Developpement d'interfaces de visualisation en React (Vite)",
         "Infrastructure as Code : Terraform (EKS, S3, Glue, IAM)",
       ],
       en: [
@@ -347,16 +347,16 @@ export const EXPERIENCES: Experience[] = [
   {
     id: "ratp-drh",
     company: "RATP",
-    emoji: "🚇",
+    icon: "Train",
     role: { fr: "Data Analyst — DRH (Apprentissage)", en: "Data Analyst — HR (Apprenticeship)" },
     location: "Paris",
-    period: "Sept. 2023 — Août 2024",
+    period: "Sept. 2023 — Aout 2024",
     description: {
       fr: [
         "Automatisation du reporting RH via VBA et SQL",
-        "Création de tableaux de bord dynamiques pour la direction",
-        "Intégration de solutions IA pour optimiser le tri des candidatures",
-        "Conseil en stratégie IA pour le département RH",
+        "Creation de tableaux de bord dynamiques pour la direction",
+        "Integration de solutions IA pour optimiser le tri des candidatures",
+        "Conseil en strategie IA pour le departement RH",
       ],
       en: [
         "HR reporting automation via VBA and SQL",
@@ -368,16 +368,16 @@ export const EXPERIENCES: Experience[] = [
   },
   {
     id: "ambroise-pare",
-    company: "Groupe Ambroise Paré",
-    emoji: "🏥",
+    company: "Groupe Ambroise Pare",
+    icon: "Hospital",
     role: { fr: "Logisticien (Stage)", en: "Logistics Officer (Internship)" },
     location: "Clichy-sous-Bois",
-    period: "Juil. — Août 2022",
+    period: "Juil. — Aout 2022",
     description: {
       fr: [
-        "Optimisation des flux d'inventaire médical",
+        "Optimisation des flux d'inventaire medical",
         "Gestion de l'approvisionnement et des dotations",
-        "Suivi et mise à jour des stocks en temps réel",
+        "Suivi et mise a jour des stocks en temps reel",
       ],
       en: [
         "Medical inventory flow optimization",
@@ -392,9 +392,9 @@ export const EDUCATION: Education[] = [
   {
     id: "efrei",
     school: "EFREI Paris",
-    emoji: "🎓",
+    icon: "GraduationCap",
     degree: {
-      fr: "Diplôme d'Ingénieur — Big Data & Machine Learning",
+      fr: "Diplome d'Ingenieur — Big Data & Machine Learning",
       en: "Engineering Degree — Big Data & Machine Learning",
     },
     period: "2024 — 2026",
@@ -404,8 +404,8 @@ export const EDUCATION: Education[] = [
         "Data Engineering, Data Lakes, ETL/ELT",
         "DevOps & MLOps (Docker, CI/CD, Terraform)",
         "Programmation fonctionnelle (Scala)",
-        "Cloud (AWS / Azure) — certifié Azure DP-100 et AI-900",
-        "Projet PortfoliA : Founding Technical Lead (équipe de 5)",
+        "Cloud (AWS / Azure) — certifie Azure DP-100 et AI-900",
+        "Projet PortfoliA : Founding Technical Lead (equipe de 5)",
       ],
       en: [
         "Machine Learning, Deep Learning, Reinforcement Learning",
@@ -420,7 +420,7 @@ export const EDUCATION: Education[] = [
   {
     id: "ukm",
     school: "UKM (Universiti Kebangsaan Malaysia)",
-    emoji: "🇲🇾",
+    icon: "Globe",
     degree: {
       fr: "Stage Recherche en IA — Projet AL-Warisan",
       en: "AI Research Internship — AL-Warisan Project",
@@ -429,8 +429,8 @@ export const EDUCATION: Education[] = [
     details: {
       fr: [
         "Laboratoire de recherche en Intelligence Artificielle",
-        "Publication ICONI 2025 (conférence au Japon)",
-        "Testing et évaluation de modèles NLP en langue malaise",
+        "Publication ICONI 2025 (conference au Japon)",
+        "Testing et evaluation de modeles NLP en langue malaise",
         "Projet gouvernemental malaisien (AL-Warisan)",
         "Sous la direction du Pr. Zukefli bin Mansour",
       ],
@@ -446,17 +446,17 @@ export const EDUCATION: Education[] = [
   {
     id: "cytech",
     school: "CY Tech",
-    emoji: "💻",
+    icon: "Monitor",
     degree: {
-      fr: "Ingénierie Informatique",
+      fr: "Ingenierie Informatique",
       en: "Computer Engineering",
     },
     period: "2023 — 2024",
     details: {
       fr: [
-        "Algorithmes & programmation avancée",
-        "Bases de données relationnelles, Systèmes d'exploitation",
-        "Optimisation linéaire et combinatoire",
+        "Algorithmes & programmation avancee",
+        "Bases de donnees relationnelles, Systemes d'exploitation",
+        "Optimisation lineaire et combinatoire",
         "Programmation Web (HTML/CSS/JS, PHP)",
       ],
       en: [
@@ -470,18 +470,18 @@ export const EDUCATION: Education[] = [
   {
     id: "insa",
     school: "INSA Rouen",
-    emoji: "📐",
+    icon: "BookOpen",
     degree: {
-      fr: "Cycle préparatoire — Sciences de l'Ingénieur",
+      fr: "Cycle preparatoire — Sciences de l'Ingenieur",
       en: "Preparatory cycle — Engineering Sciences",
     },
     period: "2021 — 2023",
     details: {
       fr: [
         "Informatique (algorithmique, introduction IA, data)",
-        "Mathématiques appliquées et statistiques",
-        "Physique et sciences de l'ingénieur",
-        "Projets d'équipe pluridisciplinaires",
+        "Mathematiques appliquees et statistiques",
+        "Physique et sciences de l'ingenieur",
+        "Projets d'equipe pluridisciplinaires",
       ],
       en: [
         "Computer Science (algorithms, intro to AI, data)",

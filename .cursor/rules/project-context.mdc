@@ -1,0 +1,105 @@
+---
+description: Contexte projet du portfolio personnel d'Amine M'Zali. Stack technique, structure, fonctionnalites, URLs.
+alwaysApply: true
+---
+
+# Portfolio Amine M'Zali — Contexte Projet
+
+## Vue d'ensemble
+
+Portfolio personnel statique bilingue (FR/EN) pour **Amine M'Zali**, Data & ML Engineer.
+Presente les projets, competences, parcours (education + experience) et informations de contact.
+
+## Proprietaire
+
+- **Amine M'Zali** — Data & ML Engineer
+- 3 ans d'experience (RATP, Sanofi)
+- EFREI Paris (Big Data & Machine Learning)
+- Certifie Azure DP-100, AI-900
+- GitHub : https://github.com/Simiamine
+- Repo : https://github.com/Simiamine/Portfolio
+- Branche active : `feat/nextjs-portfolio`
+
+## Stack Technique
+
+### Framework
+- **Next.js 16** (App Router, Server Components par defaut)
+- **TypeScript** strict mode
+- **Tailwind CSS v4** (via `@import "tailwindcss"` + `@theme inline`)
+
+### Librairies
+- **next-intl** : i18n bilingue FR/EN avec routing par locale
+- **framer-motion** : animations scroll reveal et hover
+- **next-themes** : dark/light mode avec detection systeme
+- **lucide-react** : iconographie (seul set d'icones autorise)
+- **@next/mdx** + **@mdx-js/loader** : pages projet detaillees en MDX
+
+### Polices (next/font)
+- DM Sans (body)
+- Instrument Serif (titres)
+- Geist Mono (code/tags)
+
+## Structure du Projet
+
+```
+portfolio/
+├── src/
+│   ├── app/
+│   │   ├── [locale]/           # Routes par locale (fr, en)
+│   │   │   ├── layout.tsx      # Layout avec providers
+│   │   │   ├── page.tsx        # Page principale
+│   │   │   └── projets/        # Pages projet MDX
+│   │   ├── globals.css         # Variables CSS, tokens couleurs
+│   │   └── layout.tsx          # Root layout
+│   ├── components/
+│   │   ├── hero.tsx
+│   │   ├── about.tsx
+│   │   ├── projects-section.tsx
+│   │   ├── project-card.tsx
+│   │   ├── skills-section.tsx
+│   │   ├── journey-section.tsx  # Timeline bifurquee
+│   │   ├── education-detail.tsx
+│   │   ├── experience-detail.tsx
+│   │   ├── nav.tsx
+│   │   ├── footer.tsx
+│   │   ├── cv-modal.tsx
+│   │   └── scroll-progress.tsx
+│   ├── content/
+│   │   └── data.ts             # Donnees structurees (projets, XP, edu, skills)
+│   ├── lib/
+│   │   └── i18n/               # Config next-intl
+│   └── messages/
+│       ├── fr.json             # Traductions FR
+│       └── en.json             # Traductions EN
+├── public/
+│   ├── images/moi.jpg
+│   └── cvfr.pdf
+└── .cursor/rules/              # Regles Cursor
+```
+
+## Fonctionnalites
+
+- Site statique bilingue FR/EN
+- Dark/Light mode (detection systeme)
+- Hero avec chat bubbles + floating cards
+- 3 projets principaux (PortfoliA, Deviscan, RhaniA) avec pages MDX
+- ~12 petits projets GitHub
+- Timeline bifurquee (education gauche, experience droite)
+- Sections details education et experience en grille 2 colonnes
+- Skills par categorie avec icones
+- Barre de progression au scroll + bouton scroll-to-top
+- Modal CV PDF
+- SEO : metadata, sitemap.xml, robots.txt
+
+## Commandes
+
+```bash
+npm run dev     # Dev server -> http://localhost:3000/fr
+npm run build   # Build statique
+npm run lint    # ESLint
+```
+
+## Deploiement
+
+- Vercel (prevu)
+- Domaine : a definir
