@@ -7,13 +7,17 @@
     "resume": "My Resume"
   },
   "hero": {
-    "greeting": "Hi, I'm",
-    "name": "Amine M'Zali",
-    "title": "Future Data Engineer",
-    "subtitle": "EFREI Paris · Sanofi · Available Sept. 2026",
-    "description": "I build data pipelines, ML models, and web products — from ingestion to prediction.",
+    "greeting": "Hello!",
+    "name_bubble": "I'm Amine M'Zali",
+    "title_bubble": "Future Data Engineer — EFREI Paris",
+    "subtitle_bubble": "3 years of experience | Available Sept 2026",
     "cta_projects": "View my projects",
-    "cta_resume": "Download my resume"
+    "cta_resume": "Download my resume",
+    "cards": {
+      "analysis": "Data Analysis",
+      "engineering": "Data Engineering",
+      "science": "Data Science"
+    }
   },
   "about": {
     "label": "About",
@@ -51,7 +55,9 @@
     "label": "Journey",
     "title": "Education & Experience",
     "education": "Education",
-    "experience": "Experience"
+    "experience": "Experience",
+    "education_detail_title": "Education details",
+    "experience_detail_title": "Experience details"
   },
   "footer": {
     "available": "Available September 2026",

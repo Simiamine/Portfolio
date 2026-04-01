@@ -49,7 +49,7 @@ export function ProjectsSection() {
           </h3>
         </motion.div>
 
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 mb-8">
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4 mb-8">
           {SMALL_PROJECTS.map((project, index) => (
             <motion.a
               key={project.title}

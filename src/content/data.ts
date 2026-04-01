@@ -10,6 +10,7 @@ export interface Project {
 }
 
 export interface Experience {
+  id: string;
   company: string;
   role: { fr: string; en: string };
   location: string;
@@ -18,6 +19,7 @@ export interface Experience {
 }
 
 export interface Education {
+  id: string;
   school: string;
   degree: { fr: string; en: string };
   period: string;
@@ -25,6 +27,29 @@ export interface Education {
 }
 
 export const PROJECTS: Project[] = [
+  {
+    slug: "portfolia",
+    title: "PortfoliA",
+    tagline: {
+      fr: "Plateforme d'identité professionnelle",
+      en: "Professional identity platform",
+    },
+    description: {
+      fr: "Un profil unique qui alimente CV, portfolio web et recherche d'emploi. Import LinkedIn/GitHub, matching sémantique, génération de lettres de motivation, scraping d'offres, gamification, module B2B. ~50 modules de routes backend. Projet EFREI en équipe de 5, rôle de Founding Technical Lead.",
+      en: "A single profile that feeds your resume, web portfolio, and job search. LinkedIn/GitHub import, semantic matching, cover letter generation, job scraping, gamification, B2B module. ~50 backend route modules. EFREI team project (5 people), Founding Technical Lead role.",
+    },
+    stack: [
+      "React/Vite",
+      "FastAPI",
+      "Gemini",
+      "ChromaDB",
+      "PostgreSQL",
+      "Docker",
+      "Cloudflare R2",
+      "Sentry",
+    ],
+    featured: true,
+  },
   {
     slug: "deviscan",
     title: "Deviscan",
@@ -70,27 +95,6 @@ export const PROJECTS: Project[] = [
     ],
     featured: true,
   },
-  {
-    slug: "portfolia",
-    title: "PortfoliA",
-    tagline: {
-      fr: "Plateforme d'identité professionnelle",
-      en: "Professional identity platform",
-    },
-    description: {
-      fr: "Un profil unique qui alimente CV, portfolio web et recherche d'emploi. Import LinkedIn/GitHub, matching sémantique, génération de lettres de motivation. Projet EFREI en équipe de 5.",
-      en: "A single profile that feeds your resume, web portfolio, and job search. LinkedIn/GitHub import, semantic matching, cover letter generation. EFREI team project (5 people).",
-    },
-    stack: [
-      "React/Vite",
-      "FastAPI",
-      "Gemini",
-      "ChromaDB",
-      "PostgreSQL",
-      "Docker",
-    ],
-    featured: true,
-  },
 ];
 
 export interface SmallProject {
@@ -102,13 +106,31 @@ export interface SmallProject {
 
 export const SMALL_PROJECTS: SmallProject[] = [
   {
-    title: "AirportProject",
+    title: "RLProject",
     description: {
-      fr: "Application de gestion d'aéroports avec fuzzy matching",
-      en: "Airport management app with fuzzy matching",
+      fr: "Reinforcement Learning avec Highway-env (DQN, PPO)",
+      en: "Reinforcement Learning with Highway-env (DQN, PPO)",
     },
-    tech: "Scala",
-    github: "https://github.com/Simiamine",
+    tech: "Python",
+    github: "https://github.com/Simiamine/RLProject",
+  },
+  {
+    title: "Electric Bus ML",
+    description: {
+      fr: "Prédiction de consommation de bus scolaires électriques",
+      en: "Electric school bus consumption prediction",
+    },
+    tech: "Python",
+    github: "https://github.com/Simiamine/Electric_School_Bus_ML_Project",
+  },
+  {
+    title: "Used Cars Pricing",
+    description: {
+      fr: "Prédiction de prix de voitures d'occasion",
+      en: "Used car price prediction model",
+    },
+    tech: "Python",
+    github: "https://github.com/Simiamine/used-cars-price-prediction",
   },
   {
     title: "Diabetes ML",
@@ -117,25 +139,61 @@ export const SMALL_PROJECTS: SmallProject[] = [
       en: "Diabetes classification (Logistic Reg, MLP, Grid Search)",
     },
     tech: "Python",
-    github: "https://github.com/Simiamine",
+    github: "https://github.com/Simiamine/Diabetes-Machine-Learning",
   },
   {
-    title: "E-commerce",
+    title: "ProjetDataLakes",
     description: {
-      fr: "Sites e-commerce avec gestion utilisateurs et paiement",
-      en: "E-commerce sites with user management and payment",
+      fr: "Architecture Data Lake avec ingestion et transformations",
+      en: "Data Lake architecture with ingestion and transformations",
     },
-    tech: "PHP / Django",
-    github: "https://github.com/Simiamine",
+    tech: "Python",
+    github: "https://github.com/Simiamine/ProjetDataLakes",
   },
   {
-    title: "Jeu Zelda-like",
+    title: "ProjetNoSQL",
     description: {
-      fr: "Jeu d'action en vue du dessus inspiré de Zelda",
-      en: "Top-down action game inspired by Zelda",
+      fr: "Base de données NoSQL et requêtes avancées",
+      en: "NoSQL database and advanced queries",
+    },
+    tech: "Python",
+    github: "https://github.com/Simiamine/ProjetNoSQL",
+  },
+  {
+    title: "LuxuryPropertyDB",
+    description: {
+      fr: "Modélisation de propriétés de luxe en Neo4j (Cypher)",
+      en: "Luxury property modeling in Neo4j (Cypher)",
+    },
+    tech: "Cypher",
+    github: "https://github.com/Simiamine/LuxuryPropertyDB",
+  },
+  {
+    title: "LHC Particle Data",
+    description: {
+      fr: "Analyse multivariée (PCA, CA, MCA, FAMD) sur données du LHC",
+      en: "Multivariate analysis (PCA, CA, MCA, FAMD) on LHC data",
+    },
+    tech: "Python",
+    github: "https://github.com/Simiamine/LHC-Particle-Data--PCA--CA--MCA---FAMD",
+  },
+  {
+    title: "Zelda (Java)",
+    description: {
+      fr: "Jeu d'action inspiré de Zelda: A Link to the Past",
+      en: "Action game inspired by Zelda: A Link to the Past",
     },
     tech: "Java",
-    github: "https://github.com/Simiamine",
+    github: "https://github.com/Simiamine/Zelda",
+  },
+  {
+    title: "Pokeshop",
+    description: {
+      fr: "E-commerce PHP avec API, panier et admin",
+      en: "PHP e-commerce with API, cart and admin",
+    },
+    tech: "PHP",
+    github: "https://github.com/Simiamine/Pokeshop-API-Version",
   },
   {
     title: "Éditeur d'automates",
@@ -144,7 +202,7 @@ export const SMALL_PROJECTS: SmallProject[] = [
       en: "Finite state automata manipulation",
     },
     tech: "C",
-    github: "https://github.com/Simiamine",
+    github: "https://github.com/Simiamine/ProjetCAutomate",
   },
   {
     title: "Motus",
@@ -153,7 +211,7 @@ export const SMALL_PROJECTS: SmallProject[] = [
       en: "Word game inspired by Motus / Wordle",
     },
     tech: "FreePascal",
-    github: "https://github.com/Simiamine",
+    github: "https://github.com/Simiamine/BoucheCousue",
   },
 ];
 
@@ -213,100 +271,91 @@ export const CERTIFICATIONS = [
 
 export const EXPERIENCES: Experience[] = [
   {
+    id: "sanofi",
     company: "Sanofi",
-    role: { fr: "Data & ML Engineer", en: "Data & ML Engineer" },
+    role: { fr: "Data & ML Engineer (Alternance)", en: "Data & ML Engineer (Work-Study)" },
     location: "Lyon",
     period: "Oct. 2025 — Present",
     description: {
       fr: [
-        "Pipeline d'ingestion serverless (S3 → SQS → Lambda → Snowflake)",
-        "Modélisation dbt sur Snowflake, parsers GARAMP",
-        "ML gap assessment (XGBoost, SHAP)",
-        "Infrastructure Terraform, CI/CD GitHub Actions",
+        "Pipeline d'ingestion serverless (S3 → SQS → Lambda → Parquet → Snowflake)",
+        "Modélisation dbt sur Snowflake, parsers GARAMP multi-format",
+        "ML gap assessment (XGBoost, SHAP) pour le transfert technologique",
+        "Infrastructure Terraform, CI/CD GitHub Actions + SonarCloud",
+        "Contexte réglementé FDA/EMA — industrie pharmaceutique",
       ],
       en: [
-        "Serverless ingestion pipeline (S3 → SQS → Lambda → Snowflake)",
-        "dbt modeling on Snowflake, GARAMP parsers",
-        "ML gap assessment (XGBoost, SHAP)",
-        "Terraform infrastructure, CI/CD with GitHub Actions",
+        "Serverless ingestion pipeline (S3 → SQS → Lambda → Parquet → Snowflake)",
+        "dbt modeling on Snowflake, multi-format GARAMP parsers",
+        "ML gap assessment (XGBoost, SHAP) for technology transfer",
+        "Terraform infrastructure, CI/CD with GitHub Actions + SonarCloud",
+        "FDA/EMA regulated context — pharmaceutical industry",
       ],
     },
   },
   {
-    company: "UKM",
-    role: {
-      fr: "Stage Recherche IA",
-      en: "AI Research Internship",
-    },
-    location: "Malaisie",
-    period: "Juin — Sept. 2025",
-    description: {
-      fr: [
-        "Publication ICONI 2025 (Japon)",
-        "Testing et évaluation de l'IA AL-Warisan (NLP malais)",
-        "Sous la direction du Pr. Zukefli bin Mansour",
-      ],
-      en: [
-        "ICONI 2025 publication (Japan)",
-        "Testing and evaluation of AL-Warisan AI (Malay NLP)",
-        "Under supervision of Prof. Zukefli bin Mansour",
-      ],
-    },
-  },
-  {
+    id: "ratp-auto",
     company: "RATP",
     role: {
-      fr: "Lead Data Engineer — Véhicules autonomes",
-      en: "Lead Data Engineer — Autonomous Vehicles",
+      fr: "Lead Data Engineer — Véhicules autonomes (Alternance)",
+      en: "Lead Data Engineer — Autonomous Vehicles (Work-Study)",
     },
     location: "Paris",
     period: "Août 2024 — Sept. 2025",
     description: {
       fr: [
-        "Conception d'une plateforme Data sur AWS",
-        "Pipelines ETL avec AWS Glue (PySpark)",
-        "Dashboards QuickSight, interfaces React",
-        "Infrastructure Terraform (EKS, S3, Glue)",
+        "Conception et implémentation d'une plateforme Data complète sur AWS (seul lead technique)",
+        "Pipelines ETL avec AWS Glue et PySpark pour données temps réel",
+        "Dashboards Amazon QuickSight pour le suivi de flotte",
+        "Développement d'interfaces de visualisation en React (Vite)",
+        "Infrastructure as Code : Terraform (EKS, S3, Glue, IAM)",
       ],
       en: [
-        "Design of a Data platform on AWS",
-        "ETL pipelines with AWS Glue (PySpark)",
-        "QuickSight dashboards, React interfaces",
-        "Terraform infrastructure (EKS, S3, Glue)",
+        "Design and implementation of a full Data platform on AWS (solo tech lead)",
+        "ETL pipelines with AWS Glue and PySpark for real-time data",
+        "Amazon QuickSight dashboards for fleet monitoring",
+        "Visualization interfaces built with React (Vite)",
+        "Infrastructure as Code: Terraform (EKS, S3, Glue, IAM)",
       ],
     },
   },
   {
+    id: "ratp-drh",
     company: "RATP",
-    role: { fr: "Data Analyst — DRH", en: "Data Analyst — HR" },
+    role: { fr: "Data Analyst — DRH (Apprentissage)", en: "Data Analyst — HR (Apprenticeship)" },
     location: "Paris",
     period: "Sept. 2023 — Août 2024",
     description: {
       fr: [
-        "Automatisation du reporting RH via VBA",
-        "Tableaux de bord dynamiques",
-        "Intégration IA pour optimiser le tri des candidatures",
+        "Automatisation du reporting RH via VBA et SQL",
+        "Création de tableaux de bord dynamiques pour la direction",
+        "Intégration de solutions IA pour optimiser le tri des candidatures",
+        "Conseil en stratégie IA pour le département RH",
       ],
       en: [
-        "HR reporting automation via VBA",
-        "Dynamic dashboards",
+        "HR reporting automation via VBA and SQL",
+        "Dynamic dashboards for management",
         "AI integration to optimize candidate screening",
+        "AI strategy consulting for the HR department",
       ],
     },
   },
   {
+    id: "ambroise-pare",
     company: "Groupe Ambroise Paré",
-    role: { fr: "Logisticien", en: "Logistics Officer" },
+    role: { fr: "Logisticien (Stage)", en: "Logistics Officer (Internship)" },
     location: "Clichy-sous-Bois",
     period: "Juil. — Août 2022",
     description: {
       fr: [
         "Optimisation des flux d'inventaire médical",
-        "Gestion de l'approvisionnement",
+        "Gestion de l'approvisionnement et des dotations",
+        "Suivi et mise à jour des stocks en temps réel",
       ],
       en: [
         "Medical inventory flow optimization",
-        "Supply management",
+        "Supply and allocation management",
+        "Real-time stock tracking and updates",
       ],
     },
   },
@@ -314,30 +363,59 @@ export const EXPERIENCES: Experience[] = [
 
 export const EDUCATION: Education[] = [
   {
+    id: "efrei",
     school: "EFREI Paris",
     degree: {
-      fr: "Master Big Data & Machine Learning",
-      en: "Master's in Big Data & Machine Learning",
+      fr: "Diplôme d'Ingénieur — Big Data & Machine Learning",
+      en: "Engineering Degree — Big Data & Machine Learning",
     },
     period: "2024 — 2026",
     details: {
       fr: [
-        "Machine Learning, Deep Learning",
-        "Data Engineering, Data Lakes",
-        "DevOps & MLOps",
+        "Machine Learning, Deep Learning, Reinforcement Learning",
+        "Data Engineering, Data Lakes, ETL/ELT",
+        "DevOps & MLOps (Docker, CI/CD, Terraform)",
         "Programmation fonctionnelle (Scala)",
-        "Cloud (AWS / Azure)",
+        "Cloud (AWS / Azure) — certifié Azure DP-100 et AI-900",
+        "Projet PortfoliA : Founding Technical Lead (équipe de 5)",
       ],
       en: [
-        "Machine Learning, Deep Learning",
-        "Data Engineering, Data Lakes",
-        "DevOps & MLOps",
+        "Machine Learning, Deep Learning, Reinforcement Learning",
+        "Data Engineering, Data Lakes, ETL/ELT",
+        "DevOps & MLOps (Docker, CI/CD, Terraform)",
         "Functional programming (Scala)",
-        "Cloud (AWS / Azure)",
+        "Cloud (AWS / Azure) — Azure DP-100 and AI-900 certified",
+        "PortfoliA project: Founding Technical Lead (team of 5)",
       ],
     },
   },
   {
+    id: "ukm",
+    school: "UKM (Universiti Kebangsaan Malaysia)",
+    degree: {
+      fr: "Stage Recherche en IA — Projet AL-Warisan",
+      en: "AI Research Internship — AL-Warisan Project",
+    },
+    period: "Juin — Sept. 2025",
+    details: {
+      fr: [
+        "Laboratoire de recherche en Intelligence Artificielle",
+        "Publication ICONI 2025 (conférence au Japon)",
+        "Testing et évaluation de modèles NLP en langue malaise",
+        "Projet gouvernemental malaisien (AL-Warisan)",
+        "Sous la direction du Pr. Zukefli bin Mansour",
+      ],
+      en: [
+        "Artificial Intelligence research laboratory",
+        "ICONI 2025 publication (conference in Japan)",
+        "Testing and evaluation of Malay-language NLP models",
+        "Malaysian government project (AL-Warisan)",
+        "Under supervision of Prof. Zukefli bin Mansour",
+      ],
+    },
+  },
+  {
+    id: "cytech",
     school: "CY Tech",
     degree: {
       fr: "Ingénierie Informatique",
@@ -346,18 +424,21 @@ export const EDUCATION: Education[] = [
     period: "2023 — 2024",
     details: {
       fr: [
-        "Algorithmes & programmation",
-        "Bases de données, OS",
-        "Optimisation linéaire",
+        "Algorithmes & programmation avancée",
+        "Bases de données relationnelles, Systèmes d'exploitation",
+        "Optimisation linéaire et combinatoire",
+        "Programmation Web (HTML/CSS/JS, PHP)",
       ],
       en: [
-        "Algorithms & programming",
-        "Databases, OS",
-        "Linear optimization",
+        "Algorithms & advanced programming",
+        "Relational databases, Operating systems",
+        "Linear and combinatorial optimization",
+        "Web programming (HTML/CSS/JS, PHP)",
       ],
     },
   },
   {
+    id: "insa",
     school: "INSA Rouen",
     degree: {
       fr: "Cycle préparatoire — Sciences de l'Ingénieur",
@@ -366,14 +447,16 @@ export const EDUCATION: Education[] = [
     period: "2021 — 2023",
     details: {
       fr: [
-        "Informatique (algo, IA, data)",
-        "Mathématiques appliquées",
-        "Physique",
+        "Informatique (algorithmique, introduction IA, data)",
+        "Mathématiques appliquées et statistiques",
+        "Physique et sciences de l'ingénieur",
+        "Projets d'équipe pluridisciplinaires",
       ],
       en: [
-        "Computer Science (algorithms, AI, data)",
-        "Applied mathematics",
-        "Physics",
+        "Computer Science (algorithms, intro to AI, data)",
+        "Applied mathematics and statistics",
+        "Physics and engineering sciences",
+        "Multidisciplinary team projects",
       ],
     },
   },

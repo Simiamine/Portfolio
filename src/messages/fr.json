@@ -7,13 +7,17 @@
     "resume": "Mon CV"
   },
   "hero": {
-    "greeting": "Bonjour, je suis",
-    "name": "Amine M'Zali",
-    "title": "Futur Ingénieur Data",
-    "subtitle": "EFREI Paris · Sanofi · Disponible sept. 2026",
-    "description": "Je construis des pipelines data, des modèles ML et des produits web — de l'ingestion à la prédiction.",
+    "greeting": "Bonjour !",
+    "name_bubble": "Je suis Amine M'Zali",
+    "title_bubble": "Futur Ingénieur Data — EFREI Paris",
+    "subtitle_bubble": "3 ans d'expérience | Disponible Sept 2026",
     "cta_projects": "Voir mes projets",
-    "cta_resume": "Télécharger mon CV"
+    "cta_resume": "Télécharger mon CV",
+    "cards": {
+      "analysis": "Data Analysis",
+      "engineering": "Data Engineering",
+      "science": "Data Science"
+    }
   },
   "about": {
     "label": "À propos",
@@ -51,7 +55,9 @@
     "label": "Parcours",
     "title": "Formation & Expérience",
     "education": "Formation",
-    "experience": "Expérience"
+    "experience": "Expérience",
+    "education_detail_title": "Détail de ma formation",
+    "experience_detail_title": "Détail de mes expériences"
   },
   "footer": {
     "available": "Disponible septembre 2026",

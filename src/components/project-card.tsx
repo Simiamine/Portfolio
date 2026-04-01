@@ -1,5 +1,6 @@
 "use client";
 
+import { useRef, type MouseEvent } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { useLocale } from "next-intl";
@@ -14,6 +15,23 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project, index, ctaLabel }: ProjectCardProps) {
   const locale = useLocale() as "fr" | "en";
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  function handleMouseMove(e: MouseEvent<HTMLDivElement>) {
+    const card = cardRef.current;
+    if (!card) return;
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const rotateX = ((y - rect.height / 2) / rect.height) * -8;
+    const rotateY = ((x - rect.width / 2) / rect.width) * 8;
+    card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+  }
+
+  function handleMouseLeave() {
+    const card = cardRef.current;
+    if (card) card.style.transform = "";
+  }
 
   return (
     <motion.div
@@ -23,7 +41,13 @@ export function ProjectCard({ project, index, ctaLabel }: ProjectCardProps) {
       transition={{ duration: 0.4, delay: index * 0.1 }}
     >
       <Link href={`/projets/${project.slug}`} className="block group">
-        <div className="glow-card rounded-xl border border-border bg-card p-6 h-full">
+        <div
+          ref={cardRef}
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
+          className="glow-card rounded-xl border border-border bg-card p-6 h-full transition-shadow duration-300"
+          style={{ willChange: "transform" }}
+        >
           <div className="flex items-start justify-between mb-4">
             <h3 className="font-serif text-2xl tracking-tight">
               {project.title}
