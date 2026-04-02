@@ -38,7 +38,7 @@ export const PROJECTS: Project[] = [
     slug: "portfolia",
     title: "PortfoliA",
     icon: "Target",
-    color: "#6366f1",
+    color: "#FF8C42",
     logo: "/images/logos/portfolia.png",
     tagline: {
       fr: "Plateforme d'identite professionnelle",
@@ -64,7 +64,7 @@ export const PROJECTS: Project[] = [
     slug: "deviscan",
     title: "Deviscan",
     icon: "FileSearch",
-    color: "#f59e0b",
+    color: "theme",
     logo: "/images/logos/deviscan.png",
     tagline: {
       fr: "Micro-SaaS d'extraction de devis par IA",
@@ -90,7 +90,7 @@ export const PROJECTS: Project[] = [
     slug: "rhania",
     title: "RhaniA",
     icon: "Bot",
-    color: "#10b981",
+    color: "#7A1B2E",
     logo: "/images/logos/rhania.png",
     tagline: {
       fr: "Plateforme de recrutement intelligente",
