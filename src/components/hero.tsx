@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { Download, BarChart3, Database, Brain, ArrowDown, MapPin, Calendar } from "lucide-react";
+import { Download, BarChart3, Database, Brain, ArrowDown } from "lucide-react";
 
 const FLOATING_CARDS = [
   { key: "analysis", icon: BarChart3 },
@@ -17,128 +17,97 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center overflow-hidden"
-      style={{
-        background: "linear-gradient(160deg, #1a0810 0%, #2e1520 25%, #4a2430 50%, #5e3540 75%, #704840 100%)",
-      }}
+      className="relative min-h-screen flex items-center justify-center pt-14 overflow-hidden"
+      style={{ background: "linear-gradient(145deg, #3a0f17 0%, #5e2933 40%, #815443 100%)" }}
     >
-      <div className="relative z-10 mx-auto max-w-6xl w-full px-6 sm:px-8 pt-28 pb-20">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-12 md:gap-16 items-center">
-          {/* Left: text content — 3 cols */}
-          <div className="md:col-span-3">
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute w-[120%] h-[120%] top-[-30%] left-[-10%] bg-white/[0.04] rounded-[40%_50%_35%_45%] animate-[wave_20s_ease-in-out_infinite]" />
+        <div className="absolute w-[100%] h-[100%] bottom-[-40%] right-[-10%] bg-white/[0.03] rounded-[45%_40%_50%_35%] animate-[wave_25s_ease-in-out_infinite_reverse]" />
+      </div>
+
+      <div className="relative z-10 mx-auto max-w-6xl w-full px-4 sm:px-6 py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              className="flex items-center gap-4 mb-8"
             >
-              {/* Status badge */}
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-8" style={{ backgroundColor: "rgba(210,189,177,0.12)", border: "1px solid rgba(210,189,177,0.2)" }}>
-                <span className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: "#4ade80" }} />
-                <span className="text-xs font-medium" style={{ color: "#d2bdb1" }}>{t("subtitle_bubble")}</span>
-              </div>
+              <Image
+                src="/images/moi.jpg"
+                alt="Amine M'Zali"
+                width={90}
+                height={90}
+                className="rounded-full border-4 border-white/20 shadow-2xl object-cover"
+                priority
+              />
+              <ChatBubble index={0} small>{t("greeting")}</ChatBubble>
+            </motion.div>
 
-              {/* Name */}
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6" style={{ color: "#ffffff" }}>
-                Amine
-                <br />
-                <span style={{ color: "#d2bdb1" }}>M&apos;Zali</span>
-              </h1>
+            <ChatBubble index={1}>{t("name_bubble")}</ChatBubble>
+            <ChatBubble index={2}>{t("title_bubble")}</ChatBubble>
+            <ChatBubble index={3} accent>{t("subtitle_bubble")}</ChatBubble>
 
-              {/* Title */}
-              <p className="text-xl sm:text-2xl font-medium mb-4" style={{ color: "rgba(255,255,255,0.85)" }}>
-                {t("title_bubble")}
-              </p>
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.2, duration: 0.5 }}
+              className="flex flex-wrap gap-3 mt-10"
+            >
+              <button
+                onClick={() => {
+                  document
+                    .getElementById("projects")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-primary-dark text-sm font-bold hover:bg-secondary-beige transition-colors shadow-lg"
+              >
+                {t("cta_projects")}
+                <ArrowDown size={14} />
+              </button>
 
-              {/* Meta info */}
-              <div className="flex flex-wrap items-center gap-4 mb-10">
-                <span className="inline-flex items-center gap-1.5 text-sm" style={{ color: "rgba(255,255,255,0.5)" }}>
-                  <MapPin size={14} />
-                  Paris, France
-                </span>
-                <span className="inline-flex items-center gap-1.5 text-sm" style={{ color: "rgba(255,255,255,0.5)" }}>
-                  <Calendar size={14} />
-                  EFREI Paris 2026
-                </span>
-              </div>
-
-              {/* CTAs */}
-              <div className="flex flex-wrap gap-3">
-                <button
-                  onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
-                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg text-sm font-semibold transition-all hover:scale-[1.02] active:scale-[0.98]"
-                  style={{ backgroundColor: "#ffffff", color: "#1a0810" }}
-                >
-                  {t("cta_projects")}
-                  <ArrowDown size={15} />
-                </button>
-
-                <a
-                  href="/cvfr.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg text-sm font-semibold transition-all hover:scale-[1.02] active:scale-[0.98]"
-                  style={{ backgroundColor: "rgba(255,255,255,0.08)", color: "#ffffff", border: "1px solid rgba(255,255,255,0.15)" }}
-                >
-                  {t("cta_resume")}
-                  <Download size={15} />
-                </a>
-              </div>
+              <a
+                href="/cvfr.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-white/40 text-white text-sm font-semibold hover:bg-white/10 transition-colors"
+              >
+                {t("cta_resume")}
+                <Download size={14} />
+              </a>
             </motion.div>
           </div>
 
-          {/* Right: photo + floating cards — 2 cols */}
-          <div className="md:col-span-2 flex flex-col items-center gap-8">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative"
-            >
-              <div className="w-44 h-44 sm:w-52 sm:h-52 rounded-full overflow-hidden shadow-2xl" style={{ border: "3px solid rgba(210,189,177,0.3)" }}>
-                <Image
-                  src="/images/moi.jpg"
-                  alt="Amine M'Zali"
-                  width={208}
-                  height={208}
-                  className="object-cover w-full h-full"
-                  priority
-                />
-              </div>
-              {/* Glow behind photo */}
-              <div className="absolute inset-0 rounded-full blur-3xl opacity-20" style={{ backgroundColor: "#815443" }} />
-            </motion.div>
-
-            <div className="flex flex-col gap-3 w-full max-w-[260px]">
-              {FLOATING_CARDS.map(({ key, icon: Icon }, i) => (
+          <div className="hidden lg:flex flex-col items-center gap-5">
+            {FLOATING_CARDS.map(({ key, icon: Icon }, i) => (
+              <motion.div
+                key={key}
+                initial={{ opacity: 0, x: 30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.8 + i * 0.15, duration: 0.5 }}
+              >
                 <motion.div
-                  key={key}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.5 + i * 0.12, duration: 0.4 }}
+                  animate={{ y: [0, -8, 0] }}
+                  transition={{
+                    repeat: Infinity,
+                    duration: 4,
+                    delay: i * 0.5,
+                    ease: "easeInOut",
+                  }}
+                  className="flex items-center gap-4 px-7 py-5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 shadow-xl min-w-[220px]"
                 >
-                  <motion.div
-                    animate={{ y: [0, -4, 0] }}
-                    transition={{ repeat: Infinity, duration: 4 + i * 0.5, ease: "easeInOut" }}
-                    className="flex items-center gap-3 px-5 py-3.5 rounded-xl"
-                    style={{
-                      backgroundColor: "rgba(255,255,255,0.06)",
-                      backdropFilter: "blur(16px)",
-                      border: "1px solid rgba(255,255,255,0.1)",
-                    }}
-                  >
-                    <div className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0" style={{ backgroundColor: "rgba(210,189,177,0.15)" }}>
-                      <Icon size={18} style={{ color: "#d2bdb1" }} />
-                    </div>
-                    <span className="text-sm font-semibold" style={{ color: "#ffffff" }}>{t(`cards.${key}`)}</span>
-                  </motion.div>
+                  <div className="w-12 h-12 rounded-xl bg-white/15 flex items-center justify-center">
+                    <Icon size={24} className="text-secondary-beige" />
+                  </div>
+                  <span className="text-white font-bold text-base">{t(`cards.${key}`)}</span>
                 </motion.div>
-              ))}
-            </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>
 
-      {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -149,16 +118,51 @@ export function Hero() {
           animate={{ y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
         >
-          <div className="w-5 h-8 rounded-full relative" style={{ border: "1.5px solid rgba(255,255,255,0.3)" }}>
+          <div className="w-6 h-10 rounded-full border-2 border-white/40 relative">
             <motion.div
-              animate={{ y: [3, 12], opacity: [1, 0] }}
+              animate={{ y: [4, 16], opacity: [1, 0] }}
               transition={{ repeat: Infinity, duration: 1.5 }}
-              className="absolute top-1.5 left-1/2 -translate-x-1/2 w-0.5 h-1.5 rounded-full"
-              style={{ backgroundColor: "#d2bdb1" }}
+              className="absolute top-1.5 left-1/2 -translate-x-1/2 w-1 h-2 bg-secondary-beige rounded-full"
             />
           </div>
         </motion.div>
+        <span className="text-xs text-white/50 font-medium">Scroll</span>
       </motion.div>
     </section>
+  );
+}
+
+function ChatBubble({
+  children,
+  index,
+  accent,
+  small,
+}: {
+  children: React.ReactNode;
+  index: number;
+  accent?: boolean;
+  small?: boolean;
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: -20 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ delay: 0.2 + index * 0.2, duration: 0.4 }}
+      className={`
+        relative inline-block rounded-2xl mb-3
+        ${small ? "px-4 py-2.5 text-sm" : "px-6 py-3.5 text-base sm:text-lg font-bold"}
+        ${accent
+          ? "bg-secondary-beige text-primary-dark shadow-lg"
+          : "bg-white text-gray-900 shadow-xl"
+        }
+      `}
+    >
+      <span
+        className={`absolute -left-2 top-4 w-0 h-0 border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent ${
+          accent ? "border-r-[8px] border-r-secondary-beige" : "border-r-[8px] border-r-white"
+        }`}
+      />
+      {children}
+    </motion.div>
   );
 }
