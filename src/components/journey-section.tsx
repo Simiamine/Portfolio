@@ -18,33 +18,18 @@ export function JourneySection() {
 
   const pairs: TimelinePair[] = [
     {
-      year: "2021 — 2023",
+      year: "2025 — 2026",
       education: {
-        id: EDUCATION[3].id,
-        title: EDUCATION[3].school,
-        subtitle: EDUCATION[3].degree[locale],
-        logo: EDUCATION[3].logo,
+        id: EDUCATION[1].id,
+        title: EDUCATION[1].school,
+        subtitle: EDUCATION[1].degree[locale],
+        logo: EDUCATION[1].logo,
       },
       experience: {
-        id: EXPERIENCES[3].id,
-        title: EXPERIENCES[3].company,
-        subtitle: EXPERIENCES[3].role[locale],
-        logo: EXPERIENCES[3].logo,
-      },
-    },
-    {
-      year: "2023 — 2024",
-      education: {
-        id: EDUCATION[2].id,
-        title: EDUCATION[2].school,
-        subtitle: EDUCATION[2].degree[locale],
-        logo: EDUCATION[2].logo,
-      },
-      experience: {
-        id: EXPERIENCES[2].id,
-        title: EXPERIENCES[2].company,
-        subtitle: EXPERIENCES[2].role[locale],
-        logo: EXPERIENCES[2].logo,
+        id: EXPERIENCES[0].id,
+        title: EXPERIENCES[0].company,
+        subtitle: EXPERIENCES[0].role[locale],
+        logo: EXPERIENCES[0].logo,
       },
     },
     {
@@ -63,18 +48,33 @@ export function JourneySection() {
       },
     },
     {
-      year: "2025 — 2026",
+      year: "2023 — 2024",
       education: {
-        id: EDUCATION[1].id,
-        title: EDUCATION[1].school,
-        subtitle: EDUCATION[1].degree[locale],
-        logo: EDUCATION[1].logo,
+        id: EDUCATION[2].id,
+        title: EDUCATION[2].school,
+        subtitle: EDUCATION[2].degree[locale],
+        logo: EDUCATION[2].logo,
       },
       experience: {
-        id: EXPERIENCES[0].id,
-        title: EXPERIENCES[0].company,
-        subtitle: EXPERIENCES[0].role[locale],
-        logo: EXPERIENCES[0].logo,
+        id: EXPERIENCES[2].id,
+        title: EXPERIENCES[2].company,
+        subtitle: EXPERIENCES[2].role[locale],
+        logo: EXPERIENCES[2].logo,
+      },
+    },
+    {
+      year: "2021 — 2023",
+      education: {
+        id: EDUCATION[3].id,
+        title: EDUCATION[3].school,
+        subtitle: EDUCATION[3].degree[locale],
+        logo: EDUCATION[3].logo,
+      },
+      experience: {
+        id: EXPERIENCES[3].id,
+        title: EXPERIENCES[3].company,
+        subtitle: EXPERIENCES[3].role[locale],
+        logo: EXPERIENCES[3].logo,
       },
     },
   ];
@@ -118,7 +118,7 @@ export function JourneySection() {
             {/* Central vertical line */}
             <div
               className="absolute left-1/2 top-0 bottom-0 w-px -translate-x-1/2"
-              style={{ background: "linear-gradient(to bottom, transparent, #5e2933 10%, #815443 50%, #d2bdb1 90%, transparent)" }}
+              style={{ background: "linear-gradient(to bottom, transparent, #d2bdb1 10%, #815443 50%, #5e2933 90%, transparent)" }}
             />
 
             {/* Column headers */}
@@ -140,7 +140,7 @@ export function JourneySection() {
 
             {/* Timeline rows */}
             {pairs.map((pair, idx) => {
-              const isLast = idx === pairs.length - 1;
+              const isFirst = idx === 0;
               return (
                 <div key={pair.year} className="grid grid-cols-[1fr_48px_1fr] mb-6 last:mb-0">
                   {/* Education card (left, right-aligned) */}
@@ -175,13 +175,13 @@ export function JourneySection() {
                     <div
                       className="w-3.5 h-3.5 rounded-full z-10 shadow-sm"
                       style={{
-                        background: isLast
+                        background: isFirst
                           ? "linear-gradient(135deg, #d2bdb1, #815443)"
                           : "linear-gradient(135deg, #5e2933, #815443)",
                         border: "2.5px solid var(--background)",
                       }}
                     />
-                    {isLast && (
+                    {isFirst && (
                       <div
                         className="absolute w-3.5 h-3.5 rounded-full animate-ping opacity-30"
                         style={{ backgroundColor: "#d2bdb1" }}
