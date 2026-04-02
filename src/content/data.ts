@@ -91,7 +91,7 @@ export const PROJECTS: Project[] = [
     title: "RhaniA",
     icon: "Bot",
     color: "#7A1B2E",
-    logo: "/images/logos/rhania.png",
+    logo: "/images/logos/rhania.svg",
     tagline: {
       fr: "Plateforme de recrutement intelligente",
       en: "Intelligent recruitment platform",
