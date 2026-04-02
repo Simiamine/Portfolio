@@ -62,5 +62,15 @@
   "footer": {
     "available": "Disponible septembre 2026",
     "rights": "Tous droits réservés."
+  },
+  "chat": {
+    "open": "Me poser une question",
+    "title": "Agent IA d'Amine",
+    "subtitle": "Posez vos questions sur mon parcours",
+    "welcome": "Bonjour ! Je suis l'assistant IA d'Amine. Posez-moi vos questions sur son parcours, ses competences ou ses projets.",
+    "placeholder": "Votre question...",
+    "send": "Envoyer",
+    "close": "Fermer",
+    "limit_reached": "Limite de messages atteinte pour cette session."
   }
 }
