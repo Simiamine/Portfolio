@@ -294,8 +294,8 @@ export const LANGUAGES = [
 ];
 
 export const CERTIFICATIONS = [
-  "Azure DP-100 — Data Scientist",
   "Azure AI-900 — AI Fundamentals",
+  "TOEIC — 960/990",
 ];
 
 export const EXPERIENCES: Experience[] = [
@@ -415,7 +415,7 @@ export const EDUCATION: Education[] = [
         "Data Engineering, Data Lakes, ETL/ELT",
         "DevOps & MLOps (Docker, CI/CD, Terraform)",
         "Programmation fonctionnelle (Scala)",
-        "Cloud (AWS / Azure) — certifie Azure DP-100 et AI-900",
+        "Cloud (AWS / Azure) — certifie Azure AI-900",
         "Projet PortfoliA : Founding Technical Lead (equipe de 5)",
       ],
       en: [
@@ -423,7 +423,7 @@ export const EDUCATION: Education[] = [
         "Data Engineering, Data Lakes, ETL/ELT",
         "DevOps & MLOps (Docker, CI/CD, Terraform)",
         "Functional programming (Scala)",
-        "Cloud (AWS / Azure) — Azure DP-100 and AI-900 certified",
+        "Cloud (AWS / Azure) — Azure AI-900 certified",
         "PortfoliA project: Founding Technical Lead (team of 5)",
       ],
     },

@@ -21,7 +21,7 @@ ${isFr ? "PROFIL" : "PROFILE"}:
 - ${isFr ? "3 ans d'experience en alternance" : "3 years of work-study experience"}
 - ${isFr ? "Disponible septembre 2026" : "Available September 2026"}
 - ${isFr ? "Langues : Francais (maternel), Anglais (C1/bilingue), Arabe (courant), Espagnol (basique)" : "Languages: French (native), English (C1/bilingual), Arabic (fluent), Spanish (basic)"}
-- ${isFr ? "Certifications : Azure DP-100 (Data Scientist), Azure AI-900 (AI Fundamentals)" : "Certifications: Azure DP-100 (Data Scientist), Azure AI-900 (AI Fundamentals)"}
+- ${isFr ? "Certifications : Azure AI-900 (AI Fundamentals), TOEIC 960/990" : "Certifications: Azure AI-900 (AI Fundamentals), TOEIC 960/990"}
 
 ---
 
