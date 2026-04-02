@@ -7,7 +7,6 @@ import { ArrowUpRight } from "lucide-react";
 import { useLocale } from "next-intl";
 import { Link } from "@/lib/i18n/navigation";
 import { getIcon } from "@/lib/icons";
-import { useTheme } from "@/components/theme-provider";
 import type { Project } from "@/content/data";
 
 interface ProjectCardProps {
@@ -16,19 +15,10 @@ interface ProjectCardProps {
   ctaLabel: string;
 }
 
-function useProjectColor(color: string): string {
-  const { resolvedTheme } = useTheme();
-  if (color === "theme") {
-    return resolvedTheme === "dark" ? "#e5e5e5" : "#262626";
-  }
-  return color;
-}
-
 export function ProjectCard({ project, index, ctaLabel }: ProjectCardProps) {
   const locale = useLocale() as "fr" | "en";
   const cardRef = useRef<HTMLDivElement>(null);
   const Icon = getIcon(project.icon);
-  const accentColor = useProjectColor(project.color);
 
   function handleMouseMove(e: MouseEvent<HTMLDivElement>) {
     const card = cardRef.current;
@@ -64,7 +54,7 @@ export function ProjectCard({ project, index, ctaLabel }: ProjectCardProps) {
         >
           <div
             className="h-2 rounded-t-xl"
-            style={{ background: accentColor }}
+            style={{ background: project.color }}
           />
 
           <div className="p-6 flex flex-col flex-1">
@@ -81,9 +71,9 @@ export function ProjectCard({ project, index, ctaLabel }: ProjectCardProps) {
                 ) : (
                   <div
                     className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0"
-                    style={{ background: `${accentColor}15` }}
+                    style={{ background: `${project.color}15` }}
                   >
-                    <Icon size={18} style={{ color: accentColor }} />
+                    <Icon size={18} style={{ color: project.color }} />
                   </div>
                 )}
                 <h3 className="font-serif text-2xl tracking-tight">
@@ -96,7 +86,7 @@ export function ProjectCard({ project, index, ctaLabel }: ProjectCardProps) {
               />
             </div>
 
-            <p className="text-sm font-semibold mb-3" style={{ color: accentColor }}>
+            <p className="text-sm font-semibold mb-3" style={{ color: project.color }}>
               {project.tagline[locale]}
             </p>
 
