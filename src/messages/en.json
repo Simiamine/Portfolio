@@ -65,6 +65,7 @@
   },
   "chat": {
     "open": "Ask me a question",
+    "tooltip": "I'm an AI agent who knows Amine's background. Ask me anything!",
     "title": "Amine's AI Agent",
     "subtitle": "Ask about my background",
     "welcome": "Hello! I'm Amine's AI assistant. Ask me anything about his background, skills, or projects.",

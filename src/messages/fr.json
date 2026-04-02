@@ -65,6 +65,7 @@
   },
   "chat": {
     "open": "Me poser une question",
+    "tooltip": "Je suis un agent IA qui connait le parcours d'Amine. Posez-moi vos questions !",
     "title": "Agent IA d'Amine",
     "subtitle": "Posez vos questions sur mon parcours",
     "welcome": "Bonjour ! Je suis l'assistant IA d'Amine. Posez-moi vos questions sur son parcours, ses competences ou ses projets.",
