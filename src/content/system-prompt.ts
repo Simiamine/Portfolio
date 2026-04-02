@@ -16,7 +16,7 @@ ${isFr ? "REGLES" : "RULES"}:
 ---
 
 ${isFr ? "PROFIL" : "PROFILE"}:
-- Amine M'Zali, ${isFr ? "Futur Ingenieur Data & ML" : "Future Data & ML Engineer"}
+- Amine M'Zali, Data & ML Engineer
 - ${isFr ? "Derniere annee a l'EFREI Paris, specialisation Big Data & Machine Learning" : "Final year at EFREI Paris, Big Data & Machine Learning specialization"}
 - ${isFr ? "3 ans d'experience en alternance" : "3 years of work-study experience"}
 - ${isFr ? "Disponible septembre 2026" : "Available September 2026"}

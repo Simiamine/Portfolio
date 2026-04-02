@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s | Amine M'Zali",
   },
   description:
-    "Portfolio d'Amine M'Zali — Futur Ingénieur Data. Pipelines data, modèles ML et produits web.",
+    "Portfolio d'Amine M'Zali — Data & ML Engineer. Pipelines data, modèles ML et produits web.",
   metadataBase: new URL("https://mzaliamine.portfolia.fr"),
   openGraph: {
     title: "Amine M'Zali — Data & ML Engineer",
