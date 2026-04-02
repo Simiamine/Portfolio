@@ -75,7 +75,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           ))}
         </div>
 
-        <div className="prose prose-neutral dark:prose-invert max-w-none prose-headings:font-serif prose-headings:tracking-tight prose-code:font-mono prose-code:text-sm prose-a:text-primary-light prose-a:no-underline hover:prose-a:underline">
+        <div className="prose max-w-none prose-headings:font-serif prose-headings:tracking-tight prose-headings:text-primary-dark dark:prose-headings:text-secondary-beige prose-p:text-foreground prose-li:text-foreground prose-strong:text-foreground prose-code:font-mono prose-code:text-sm prose-a:text-primary-light prose-a:no-underline hover:prose-a:underline dark:prose-invert">
           <Content />
         </div>
       </article>
