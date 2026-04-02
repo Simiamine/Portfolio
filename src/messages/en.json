@@ -62,5 +62,15 @@
   "footer": {
     "available": "Available September 2026",
     "rights": "All rights reserved."
+  },
+  "chat": {
+    "open": "Ask me a question",
+    "title": "Amine's AI Agent",
+    "subtitle": "Ask about my background",
+    "welcome": "Hello! I'm Amine's AI assistant. Ask me anything about his background, skills, or projects.",
+    "placeholder": "Your question...",
+    "send": "Send",
+    "close": "Close",
+    "limit_reached": "Message limit reached for this session."
   }
 }

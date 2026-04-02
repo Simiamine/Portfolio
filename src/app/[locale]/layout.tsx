@@ -7,6 +7,7 @@ import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ScrollProgress } from "@/components/scroll-progress";
+import { ChatButton } from "@/components/chat-button";
 
 interface LocaleLayoutProps {
   children: React.ReactNode;
@@ -32,6 +33,7 @@ export default async function LocaleLayout({
         <Nav />
         <main className="flex-1">{children}</main>
         <Footer />
+        <ChatButton />
       </ThemeProvider>
     </NextIntlClientProvider>
   );
