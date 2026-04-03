@@ -4,9 +4,13 @@ import { ArrowLeft } from "lucide-react";
 import { getProjectSlugs } from "@/lib/mdx";
 import { PROJECTS } from "@/content/data";
 import { Link } from "@/lib/i18n/navigation";
+import { routing } from "@/lib/i18n/routing";
 
 export function generateStaticParams() {
-  return getProjectSlugs().map((slug) => ({ slug }));
+  const slugs = getProjectSlugs();
+  return routing.locales.flatMap((locale) =>
+    slugs.map((slug) => ({ locale, slug }))
+  );
 }
 
 interface ProjectPageProps {
