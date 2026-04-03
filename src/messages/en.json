@@ -4,6 +4,7 @@
     "projects": "Projects",
     "skills": "Skills",
     "journey": "Journey",
+    "contact": "Contact",
     "resume": "My Resume"
   },
   "hero": {
@@ -58,6 +59,21 @@
     "experience": "Experience",
     "education_detail_title": "Education details",
     "experience_detail_title": "Experience details"
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Get in touch",
+    "description": "A question, an opportunity, or just want to chat? Feel free to drop me a message.",
+    "name": "Name",
+    "name_placeholder": "Your name",
+    "email": "Email",
+    "email_placeholder": "your@email.com",
+    "message": "Message",
+    "message_placeholder": "Your message...",
+    "send": "Send",
+    "success": "Message sent successfully!",
+    "error": "Error sending message. Please try again.",
+    "alternative": "You can also reach me directly by email or through my social profiles."
   },
   "footer": {
     "available": "Available September 2026",

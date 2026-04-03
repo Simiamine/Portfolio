@@ -7,7 +7,7 @@ import { useTheme } from "@/components/theme-provider";
 import { useState } from "react";
 import { CvModal } from "@/components/cv-modal";
 
-const NAV_ITEMS = ["about", "projects", "skills", "journey"] as const;
+const NAV_ITEMS = ["about", "projects", "skills", "journey", "contact"] as const;
 
 export function Nav() {
   const t = useTranslations("nav");

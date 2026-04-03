@@ -4,6 +4,7 @@
     "projects": "Projets",
     "skills": "Compétences",
     "journey": "Parcours",
+    "contact": "Contact",
     "resume": "Mon CV"
   },
   "hero": {
@@ -58,6 +59,21 @@
     "experience": "Expérience",
     "education_detail_title": "Détail de ma formation",
     "experience_detail_title": "Détail de mes expériences"
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Me contacter",
+    "description": "Une question, une opportunité ou simplement envie d'échanger ? N'hésitez pas à me laisser un message.",
+    "name": "Nom",
+    "name_placeholder": "Votre nom",
+    "email": "E-mail",
+    "email_placeholder": "votre@email.com",
+    "message": "Message",
+    "message_placeholder": "Votre message...",
+    "send": "Envoyer",
+    "success": "Message envoyé avec succès !",
+    "error": "Erreur lors de l'envoi. Réessayez.",
+    "alternative": "Vous pouvez aussi me contacter directement par e-mail ou via mes réseaux."
   },
   "footer": {
     "available": "Disponible septembre 2026",
