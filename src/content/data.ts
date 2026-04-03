@@ -58,6 +58,7 @@ export const PROJECTS: Project[] = [
       "Cloudflare R2",
       "Sentry",
     ],
+    url: "https://portfolia.fr",
     featured: true,
   },
   {
@@ -109,6 +110,7 @@ export const PROJECTS: Project[] = [
       "Gemini Vision",
       "Docker",
     ],
+    url: "https://rhania.fr",
     featured: true,
   },
 ];

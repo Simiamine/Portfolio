@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ExternalLink } from "lucide-react";
 import { getProjectSlugs } from "@/lib/mdx";
 import { PROJECTS } from "@/content/data";
 import { Link } from "@/lib/i18n/navigation";
@@ -67,6 +67,18 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <p className="text-lg text-primary-light mb-4">
           {project.tagline[locale as "fr" | "en"]}
         </p>
+
+        {project.url && (
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground hover:text-primary-light transition-colors mb-6"
+          >
+            <ExternalLink size={14} />
+            {project.url.replace(/^https?:\/\//, "")}
+          </a>
+        )}
 
         <div className="flex flex-wrap gap-1.5 mb-10">
           {project.stack.map((tech) => (
