@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { getProjectSlugs } from "@/lib/mdx";
 import { PROJECTS } from "@/content/data";
 import { Link } from "@/lib/i18n/navigation";
@@ -73,10 +73,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             href={project.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground hover:text-primary-light transition-colors mb-6"
+            className="inline-flex items-center gap-1.5 h-9 px-4 rounded-lg bg-foreground text-background text-sm font-medium hover:opacity-90 transition-opacity mb-6"
           >
-            <ExternalLink size={14} />
-            {project.url.replace(/^https?:\/\//, "")}
+            {locale === "fr" ? "Voir le site" : "Visit site"}
+            <ArrowUpRight size={14} />
           </a>
         )}
 
