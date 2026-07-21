@@ -66,7 +66,7 @@ export function ProjectsSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: index * 0.04 }}
                 style={{ opacity: 0 }}
-                className="group flex items-start gap-3 p-4 rounded-lg border border-border bg-card hover:border-primary-light/30 hover:shadow-md transition-all"
+                className="group flex items-start gap-3 p-4 rounded-lg border border-border bg-card hover:border-primary-light/30 hover:shadow-md transition-[color,background-color,border-color,box-shadow]"
               >
                 <Icon size={18} className="text-primary-light mt-0.5 shrink-0" />
                 <div className="flex-1 min-w-0">

@@ -37,7 +37,7 @@ export function ExperienceDetail() {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.08 }}
               style={{ opacity: 0 }}
-              className="scroll-mt-20 rounded-xl border border-border bg-card p-5 hover:shadow-md hover:border-primary-light/20 transition-all"
+              className="scroll-mt-20 rounded-xl border border-border bg-card p-5 hover:shadow-md hover:border-primary-light/20 transition-[color,background-color,border-color,box-shadow]"
             >
               <div className="flex items-start gap-3 mb-3">
                 <Image

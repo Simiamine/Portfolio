@@ -25,7 +25,7 @@ function SkillGroup({
       viewport={{ once: true }}
       transition={{ duration: 0.3, delay: index * 0.06 }}
       style={{ opacity: 0 }}
-      className="rounded-xl border border-border bg-card p-5 hover:shadow-md hover:border-primary-light/20 transition-all"
+      className="rounded-xl border border-border bg-card p-5 hover:shadow-md hover:border-primary-light/20 transition-[color,background-color,border-color,box-shadow]"
     >
       <div className="flex items-center gap-2 mb-3">
         <div className="w-8 h-8 rounded-lg bg-primary-light/10 flex items-center justify-center">
