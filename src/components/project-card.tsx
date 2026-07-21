@@ -38,12 +38,16 @@ export function ProjectCard({ project, index, ctaLabel }: ProjectCardProps) {
     const y = e.clientY - rect.top;
     const rotateX = ((y - rect.height / 2) / rect.height) * -6;
     const rotateY = ((x - rect.width / 2) / rect.width) * 6;
+    card.style.willChange = "transform";
     card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
   }
 
   function handleMouseLeave() {
     const card = cardRef.current;
-    if (card) card.style.transform = "";
+    if (card) {
+      card.style.transform = "";
+      card.style.willChange = "auto";
+    }
   }
 
   return (
@@ -52,6 +56,7 @@ export function ProjectCard({ project, index, ctaLabel }: ProjectCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.4, delay: index * 0.1 }}
+      style={{ opacity: 0 }}
       className="h-full"
     >
       <Link href={`/projets/${project.slug}`} className="block group h-full">
@@ -59,8 +64,7 @@ export function ProjectCard({ project, index, ctaLabel }: ProjectCardProps) {
           ref={cardRef}
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
-          className="glow-card rounded-xl border border-border bg-card h-full flex flex-col transition-shadow duration-300"
-          style={{ willChange: "transform" }}
+          className="glow-card card-3d rounded-xl border border-border bg-card h-full flex flex-col transition-shadow duration-300"
         >
           <div
             className="h-2 rounded-t-xl"
