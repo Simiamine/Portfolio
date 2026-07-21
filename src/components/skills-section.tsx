@@ -24,6 +24,7 @@ function SkillGroup({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.3, delay: index * 0.06 }}
+      style={{ opacity: 0 }}
       className="rounded-xl border border-border bg-card p-5 hover:shadow-md hover:border-primary-light/20 transition-all"
     >
       <div className="flex items-center gap-2 mb-3">
@@ -66,6 +67,7 @@ export function SkillsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
+          style={{ opacity: 0 }}
         >
           <p className="text-sm font-mono text-primary-light mb-2">
             {t("label")}
@@ -93,6 +95,7 @@ export function SkillsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: 0.1 }}
+            style={{ opacity: 0 }}
             className="rounded-xl border border-border bg-card p-5"
           >
             <div className="flex items-center gap-2 mb-4">
@@ -123,6 +126,7 @@ export function SkillsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: 0.15 }}
+            style={{ opacity: 0 }}
             className="rounded-xl border border-border bg-card p-5"
           >
             <div className="flex items-center gap-2 mb-4">

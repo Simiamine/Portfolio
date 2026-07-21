@@ -17,6 +17,7 @@ export function ExperienceDetail() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
+          style={{ opacity: 0 }}
         >
           <p className="text-sm font-mono text-primary-light mb-2">
             {t("experience")}
@@ -35,6 +36,7 @@ export function ExperienceDetail() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.08 }}
+              style={{ opacity: 0 }}
               className="scroll-mt-20 rounded-xl border border-border bg-card p-5 hover:shadow-md hover:border-primary-light/20 transition-all"
             >
               <div className="flex items-start gap-3 mb-3">

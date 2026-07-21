@@ -30,6 +30,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
+              style={{ opacity: 0 }}
             >
               {/* Status badge */}
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-8" style={{ backgroundColor: "rgba(210,189,177,0.12)", border: "1px solid rgba(210,189,177,0.2)" }}>
@@ -92,6 +93,7 @@ export function Hero() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
+              style={{ opacity: 0 }}
               className="relative"
             >
               <div className="w-44 h-44 sm:w-52 sm:h-52 rounded-full overflow-hidden shadow-2xl" style={{ border: "3px solid rgba(210,189,177,0.3)" }}>

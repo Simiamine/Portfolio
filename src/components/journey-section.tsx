@@ -92,6 +92,7 @@ export function JourneySection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.5 }}
+          style={{ opacity: 0 }}
           className="text-center mb-16"
         >
           <p className="text-sm font-mono text-primary-light mb-2">

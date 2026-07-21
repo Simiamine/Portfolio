@@ -19,6 +19,7 @@ export function ProjectsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
+          style={{ opacity: 0 }}
         >
           <p className="text-sm font-mono text-primary-light mb-2">
             {t("label")}
@@ -44,6 +45,7 @@ export function ProjectsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
+          style={{ opacity: 0 }}
         >
           <h3 className="text-xl font-semibold tracking-tight mb-6">
             {t("other_title")}
@@ -63,6 +65,7 @@ export function ProjectsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: index * 0.04 }}
+                style={{ opacity: 0 }}
                 className="group flex items-start gap-3 p-4 rounded-lg border border-border bg-card hover:border-primary-light/30 hover:shadow-md transition-all"
               >
                 <Icon size={18} className="text-primary-light mt-0.5 shrink-0" />

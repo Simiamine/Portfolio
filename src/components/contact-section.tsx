@@ -47,6 +47,7 @@ export function ContactSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
+          style={{ opacity: 0 }}
         >
           <p className="text-sm font-mono text-primary-light mb-2">
             {t("label")}

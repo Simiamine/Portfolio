@@ -31,6 +31,7 @@ export function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
+          style={{ opacity: 0 }}
         >
           <p className="text-sm font-mono text-primary-light mb-2">
             {t("label")}
@@ -51,7 +52,9 @@ export function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: index * 0.08 }}
-                className="flex items-center gap-3 p-4 rounded-lg border border-border bg-card hover:bg-primary-light/5 hover:-translate-y-1 transition-all"
+                whileHover={{ y: -4 }}
+                style={{ opacity: 0 }}
+                className="flex items-center gap-3 p-4 rounded-lg border border-border bg-card hover:bg-primary-light/5 transition-colors"
               >
                 <Icon size={18} className="text-primary-light shrink-0" />
                 <span className="text-sm font-medium">
