@@ -124,6 +124,16 @@ export interface SmallProject {
 
 export const SMALL_PROJECTS: SmallProject[] = [
   {
+    title: "ProjetDataLakes",
+    icon: "Database",
+    description: {
+      fr: "Architecture Data Lake avec ingestion et transformations structurées",
+      en: "Data Lake architecture with structured ingestion and transformations",
+    },
+    tech: "Python",
+    github: "https://github.com/Simiamine/ProjetDataLakes",
+  },
+  {
     title: "RLProject",
     icon: "Gamepad2",
     description: {
@@ -137,58 +147,18 @@ export const SMALL_PROJECTS: SmallProject[] = [
     title: "Electric Bus ML",
     icon: "Zap",
     description: {
-      fr: "Prediction de consommation de bus scolaires electriques",
-      en: "Electric school bus consumption prediction",
+      fr: "Prédiction de consommation de bus électriques par Machine Learning",
+      en: "Electric bus power consumption prediction via Machine Learning",
     },
     tech: "Python",
     github: "https://github.com/Simiamine/Electric_School_Bus_ML_Project",
   },
   {
-    title: "Used Cars Pricing",
-    icon: "Car",
-    description: {
-      fr: "Prediction de prix de voitures d'occasion",
-      en: "Used car price prediction model",
-    },
-    tech: "Python",
-    github: "https://github.com/Simiamine/used-cars-price-prediction",
-  },
-  {
-    title: "Diabetes ML",
-    icon: "HeartPulse",
-    description: {
-      fr: "Classification du diabete (Logistic Reg, MLP, Grid Search)",
-      en: "Diabetes classification (Logistic Reg, MLP, Grid Search)",
-    },
-    tech: "Python",
-    github: "https://github.com/Simiamine/Diabetes-Machine-Learning",
-  },
-  {
-    title: "ProjetDataLakes",
-    icon: "Database",
-    description: {
-      fr: "Architecture Data Lake avec ingestion et transformations",
-      en: "Data Lake architecture with ingestion and transformations",
-    },
-    tech: "Python",
-    github: "https://github.com/Simiamine/ProjetDataLakes",
-  },
-  {
-    title: "ProjetNoSQL",
-    icon: "BarChart3",
-    description: {
-      fr: "Base de donnees NoSQL et requetes avancees",
-      en: "NoSQL database and advanced queries",
-    },
-    tech: "Python",
-    github: "https://github.com/Simiamine/ProjetNoSQL",
-  },
-  {
     title: "LuxuryPropertyDB",
     icon: "Home",
     description: {
-      fr: "Modelisation de proprietes de luxe en Neo4j (Cypher)",
-      en: "Luxury property modeling in Neo4j (Cypher)",
+      fr: "Modélisation de base de données orientée graphe sous Neo4j (Cypher)",
+      en: "Graph database modeling using Neo4j (Cypher)",
     },
     tech: "Cypher",
     github: "https://github.com/Simiamine/LuxuryPropertyDB",
@@ -197,51 +167,11 @@ export const SMALL_PROJECTS: SmallProject[] = [
     title: "LHC Particle Data",
     icon: "Atom",
     description: {
-      fr: "Analyse multivariee (PCA, CA, MCA, FAMD) sur donnees du LHC",
-      en: "Multivariate analysis (PCA, CA, MCA, FAMD) on LHC data",
+      fr: "Analyse statistique multivariée (PCA, CA, MCA, FAMD) sur données du CERN / LHC",
+      en: "Multivariate statistical analysis (PCA, CA, MCA, FAMD) on CERN / LHC data",
     },
     tech: "Python",
     github: "https://github.com/Simiamine/LHC-Particle-Data--PCA--CA--MCA---FAMD",
-  },
-  {
-    title: "Zelda (Java)",
-    icon: "Sword",
-    description: {
-      fr: "Jeu d'action inspire de Zelda: A Link to the Past",
-      en: "Action game inspired by Zelda: A Link to the Past",
-    },
-    tech: "Java",
-    github: "https://github.com/Simiamine/Zelda",
-  },
-  {
-    title: "Pokeshop",
-    icon: "ShoppingCart",
-    description: {
-      fr: "E-commerce PHP avec API, panier et admin",
-      en: "PHP e-commerce with API, cart and admin",
-    },
-    tech: "PHP",
-    github: "https://github.com/Simiamine/Pokeshop-API-Version",
-  },
-  {
-    title: "Editeur d'automates",
-    icon: "Cog",
-    description: {
-      fr: "Manipulation d'automates d'etats finis",
-      en: "Finite state automata manipulation",
-    },
-    tech: "C",
-    github: "https://github.com/Simiamine/ProjetCAutomate",
-  },
-  {
-    title: "Motus",
-    icon: "Type",
-    description: {
-      fr: "Jeu de mots inspire de Motus / Wordle",
-      en: "Word game inspired by Motus / Wordle",
-    },
-    tech: "FreePascal",
-    github: "https://github.com/Simiamine/BoucheCousue",
   },
 ];
 
