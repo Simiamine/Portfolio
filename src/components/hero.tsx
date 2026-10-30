@@ -3,12 +3,12 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { Download, BarChart3, Database, Brain, ArrowDown, MapPin, Calendar } from "lucide-react";
+import { Download, Cloud, Database, Brain, ArrowDown, MapPin, Calendar } from "lucide-react";
 
 const FLOATING_CARDS = [
-  { key: "analysis", icon: BarChart3 },
+  { key: "cloud", icon: Cloud },
   { key: "engineering", icon: Database },
-  { key: "science", icon: Brain },
+  { key: "mlops", icon: Brain },
 ] as const;
 
 export function Hero() {

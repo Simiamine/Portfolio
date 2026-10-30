@@ -15,19 +15,19 @@
     "cta_projects": "View my projects",
     "cta_resume": "Download my resume",
     "cards": {
-      "analysis": "Data Analysis",
+      "cloud": "Cloud & DevOps",
       "engineering": "Data Engineering",
-      "science": "Data Science"
+      "mlops": "ML & MLOps"
     }
   },
   "about": {
     "label": "About",
     "title": "Who am I?",
-    "text": "In my final year at EFREI Paris, specializing in Big Data and Machine Learning, I bring 3 years of work-study experience in data — transportation (RATP, autonomous vehicles), pharmaceutical (Sanofi), and international research (UKM Malaysia). I've also designed and built three complete web products on the side.",
+    "text": "Graduate from EFREI Paris specializing in Big Data and Machine Learning, with 3 years of operational experience in data — pharmaceutical (Sanofi), connected transportation (RATP, autonomous vehicles), and international research (UKM Malaysia). I have also designed and shipped SaaS platforms and autonomous AI agents in production.",
     "highlights": {
-      "analysis": "Data Analysis",
+      "cloud": "Cloud & DevOps",
       "engineering": "Data Engineering",
-      "science": "Data Science",
+      "mlops": "ML & MLOps",
       "innovative": "Innovative",
       "collaborative": "Collaborative",
       "curious": "Curious"

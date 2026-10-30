@@ -15,19 +15,19 @@
     "cta_projects": "Voir mes projets",
     "cta_resume": "Télécharger mon CV",
     "cards": {
-      "analysis": "Data Analysis",
+      "cloud": "Cloud & DevOps",
       "engineering": "Data Engineering",
-      "science": "Data Science"
+      "mlops": "ML & MLOps"
     }
   },
   "about": {
     "label": "À propos",
     "title": "Qui suis-je ?",
-    "text": "En dernière année d'école d'ingénieur à l'EFREI Paris, spécialisé Big Data et Machine Learning, je cumule 3 ans d'alternance dans la data — transport (RATP, véhicules autonomes), pharmaceutique (Sanofi) et recherche internationale (UKM Malaisie). J'ai aussi conçu et développé trois produits web complets en parallèle.",
+    "text": "Diplômé de l'EFREI Paris en Big Data et Machine Learning, je cumule 3 ans d'expérience opérationnelle dans la data — pharmaceutique (Sanofi), transport connecté (RATP, véhicules autonomes) et recherche internationale (UKM Malaisie). J'ai également conçu et déployé en production des plateformes SaaS et agents IA autonomes.",
     "highlights": {
-      "analysis": "Data Analysis",
+      "cloud": "Cloud & DevOps",
       "engineering": "Data Engineering",
-      "science": "Data Science",
+      "mlops": "ML & MLOps",
       "innovative": "Innovant",
       "collaborative": "Collaboratif",
       "curious": "Curieux"

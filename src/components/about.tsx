@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import {
-  BarChart3,
+  Cloud,
   Database,
   Brain,
   Lightbulb,
@@ -12,9 +12,9 @@ import {
 } from "lucide-react";
 
 const HIGHLIGHTS = [
-  { key: "analysis", icon: BarChart3 },
+  { key: "cloud", icon: Cloud },
   { key: "engineering", icon: Database },
-  { key: "science", icon: Brain },
+  { key: "mlops", icon: Brain },
   { key: "innovative", icon: Lightbulb },
   { key: "collaborative", icon: Users },
   { key: "curious", icon: Search },
