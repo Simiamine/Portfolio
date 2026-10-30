@@ -43,7 +43,7 @@ ${isFr ? "EXPERIENCES PROFESSIONNELLES" : "PROFESSIONAL EXPERIENCE"}:
    - AWS (S3, Glue), Terraform (IaC)
 
 3. RATP — Consultant Data & ${isFr ? "Innovation IA, DRH" : "AI Innovation, HR"} — Paris — Sept. 2023 - Juil. 2024
-   - ${isFr ? "Automatisation du reporting RH (VBA / SQL) et tableaux de bord de pilotage" : "HR reporting automation (VBA / SQL) and steering dashboards"}
+   - ${isFr ? "Automatisation du reporting RH sur l'outil de BI Workday et developpement d'applications Excel (macros VBA avancees, UserForms)" : "HR reporting automation on Workday BI tool and Excel app development (advanced VBA macros, UserForms)"}
    - ${isFr ? "Conseil en strategie IA : identification de cas d'usage et feuille de route d'integration" : "AI strategy consulting: use-case identification and integration roadmap"}
    - ${isFr ? "Conception d'une solution d'IA generative pour traduire des videos de recrutement avec lip-sync naturel" : "Designed a generative-AI solution to translate recruitment videos with natural lip-sync"}
 
