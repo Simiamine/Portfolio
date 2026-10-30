@@ -1,0 +1,34 @@
+## Contexte
+
+Gérer ses tâches, ses rappels, la veille d'opportunités et ses flux d'informations personnels au quotidien demande une charge cognitive continue. Les assistants existants manquent souvent de persistance, de proactivité ou dépendent d'écosystèmes fermés.
+
+## Le problème
+
+Comment concevoir un **agent personnel autonome disponible 24/7**, capable d'exécuter des routines en arrière-plan (veille d'offres, rappels, mémoire contextuelle) et pilotable avec zéro friction depuis un canal de messagerie mobile (Telegram) ?
+
+## Solution technique
+
+LocusBrain est un agent autonome asynchrone fonctionnant en continu comme service système Linux sous `systemd` sur une VM Google Cloud Platform.
+
+### Architecture
+
+- **Runtime & Système** : Service Linux `systemd` hébergé sur une VM Google Cloud Platform (Compute Engine)
+- **Moteur Backend** : Python asynchrone (`asyncio`), validation de données stricte via Pydantic v2
+- **Interface Utilisateur** : Bot Telegram temps réel (Telegram Bot API, gestion des messages texte et vocaux)
+- **Modèle de Langage & Raisonnement** : Gemini API avec structured output et appel d'outils (Tool Calling)
+- **Base de données & Persistance** : SQLite avec recherche textuelle intégrée (FTS5) pour la mémoire conversationnelle et le stockage des rappels
+
+### Fonctionnalités clés
+
+- **Disponibilité 24/7** : Démon persistant gérant automatiquement les reprises sur crash et les redémarrages système
+- **Traitement asynchrone multi-modal** : Prise en charge des entrées texte et des messages vocaux transcrits et analysés à la volée
+- **Gestion proactive des rappels** : Planification dynamique et notifications automatiques poussées sur mobile
+- **Mémoire contextuelle persistante** : Indexation et recherche sémantique des notes, idées et préférences utilisateur
+- **Pipeline de veille d'opportunités** : Analyse et filtrage automatisé d'offres d'emploi selon des critères personnalisés
+
+### Points techniques notables
+
+- Zéro surcharge d'infrastructure grâce à une architecture légère et un démon systemd optimisé
+- Gestion asynchrone des flux d'événements pour des temps de réponse instantanés
+- Isolation stricte des variables d'environnement et des clés d'API
+- Fiabilité prouvée par une exécution ininterrompue en production personnelle

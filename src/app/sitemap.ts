@@ -4,7 +4,7 @@ const BASE_URL = "https://mzaliamine.portfolia.fr";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const locales = ["fr", "en"];
-  const projects = ["deviscan", "rhania", "portfolia"];
+  const projects = ["portfolia", "rhania", "locusbrain"];
 
   const pages: MetadataRoute.Sitemap = [];
 

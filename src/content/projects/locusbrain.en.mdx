@@ -1,0 +1,34 @@
+## Context
+
+Managing daily tasks, reminders, career opportunities, and personal information streams requires continuous cognitive effort. Traditional digital assistants often lack persistence, proactivity, or lock users into closed ecosystems.
+
+## The problem
+
+How to build a **24/7 autonomous personal agent** capable of running background routines (job scraping/filtering, reminders, contextual memory) and controllable with zero friction from a mobile messaging channel (Telegram)?
+
+## Technical solution
+
+LocusBrain is an asynchronous autonomous agent running continuously as a Linux `systemd` daemon on a Google Cloud Platform VM.
+
+### Architecture
+
+- **Runtime & System**: Linux `systemd` background daemon on a Google Cloud Platform VM (Compute Engine)
+- **Backend Engine**: Asynchronous Python (`asyncio`), strict data validation via Pydantic v2
+- **User Interface**: Real-time Telegram bot (Telegram Bot API, supporting both text and voice input)
+- **Language Model & Reasoning**: Gemini API with structured outputs and Tool Calling capabilities
+- **Database & Persistence**: SQLite with integrated Full-Text Search (FTS5) for conversational memory and reminder scheduling
+
+### Key features
+
+- **24/7 Availability**: Persistent systemd daemon with automated restart handling and crash recovery
+- **Multimodal Asynchronous Processing**: Direct support for text and voice messages, transcribed and parsed on the fly
+- **Proactive Reminder Engine**: Dynamic scheduling and proactive push notifications directly to mobile
+- **Persistent Contextual Memory**: Indexing and retrieval of notes, thoughts, and user preferences
+- **Opportunity Monitoring Pipeline**: Automated scraping, parsing, and filtering of career opportunities based on customized criteria
+
+### Notable technical details
+
+- Minimal resource footprint through a lightweight async architecture and optimized systemd service
+- Event-driven concurrency for instant response latency
+- Secure secret management and environment variable isolation
+- Continuous reliability demonstrated across months of uninterrupted personal production
